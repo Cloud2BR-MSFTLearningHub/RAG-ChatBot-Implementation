@@ -66,9 +66,27 @@ Last updated: 2026-04-06
 >   - evaluations
 >   - deep integration
 >- If you simply want: → `Microsoft Copilot (consumer)`
->   - a `web-grounded personal assistant` (not for sensitive work data) 
+>   - a `web-grounded personal assistant` (not for sensitive work data)
+>- If you need **AI assistance for coding/development**: → choose `GitHub Copilot`
+>   - AI-powered code completions, chat, and PR reviews in your IDE
+>   - Works in VS Code, JetBrains, Vim, and more
+>   - Supports 30+ programming languages
+>   - Requires a [GitHub Copilot subscription](https://github.com/features/copilot)
 
 <img width="846" height="1048" alt="ai-chat-decision-flow drawio" src="https://github.com/user-attachments/assets/9e5423bb-e8c1-49d9-8ff9-ff5f327213ff" />
+
+> [!TIP]
+> <img src="https://img.shields.io/badge/GitHub_Copilot-AI_Coding_Assistant-6e40c9?style=flat&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="22"/> &nbsp; **Need AI assistance for your code?** → Use **[GitHub Copilot](https://github.com/features/copilot)**!
+>
+> GitHub Copilot is your AI-powered coding assistant — available directly in your IDE. It provides intelligent code completions, an in-editor chat, pull request summaries, and automated code reviews. If your goal is to **write, understand, or review code faster**, GitHub Copilot is the right choice.
+>
+> | Feature | Details |
+> |---------|---------|
+> | **Where it works** | VS Code, JetBrains, Vim/Neovim, Visual Studio, Azure Data Studio, Xcode |
+> | **What it does** | Code completions, inline chat, `/explain`, `/fix`, `/test`, PR summaries |
+> | **Languages** | 30+ including Python, JavaScript, TypeScript, Go, Java, C#, C++ |
+> | **Plans** | [Individual, Business, Enterprise](https://github.com/features/copilot#pricing) — free tier available |
+> | **Docs** | [GitHub Copilot Documentation](https://docs.github.com/copilot) |
 
 > [!NOTE]
 > `When users don't want/need to create their own interface or customized view`, they can `leverage the AI integrated into our products and services, depending on their needs.` For example, if they require visualizations capabilities with AI assistance, they can use the AI already built into `Fabric/Power Bi to generate reports, ask questions, etc.` Click here to read more about it [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) 
@@ -85,6 +103,7 @@ Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
 | Develop a **RAG** app or **multi-agent** solution with fine control over models, evals, safety, and infra | **Azure AI Foundry (Azure AI Studio)**                  | Unified SDK/APIs, integrates Azure OpenAI & Cognitive Services, deep ops control | Best for pro-code; aligns with PaaS patterns in CAF.                  |
 | Extend M365 Copilot with **task-specific agents** using declarative tools                                 | **Agents for M365 Copilot** (via Copilot Studio & SDKs) | Purpose-built extensions that run inside M365 Copilot orchestrator               | See tool comparison & planning guide.   |
 | Personal, **non-sensitive** queries with image creation                                                   | **Microsoft Copilot (consumer)**                        | Free web-grounded assistant                                                      | Don’t use for confidential work content. |
+| Need **AI assistance for coding** — completions, chat, PR reviews, test generation — in your IDE         | <img src="https://img.shields.io/badge/GitHub-Copilot-6e40c9?logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="18"/> **[GitHub Copilot](https://github.com/features/copilot)** | AI pair programmer embedded in your editor; works across 30+ languages | Requires GitHub.com subscription; Individual, Business & Enterprise plans; free tier available. |
 
 </details>
 
