@@ -73,19 +73,19 @@ Last updated: 2026-07-01
 >   - Supports 30+ programming languages
 >   - Requires a [GitHub Copilot subscription](https://github.com/features/copilot)
 
-<img width="846" height="1048" alt="ai-chat-decision-flow drawio" src="https://github.com/user-attachments/assets/9e5423bb-e8c1-49d9-8ff9-ff5f327213ff" />
+<img width="846" height="1048" alt="ai-chat-decision-flow drawio" src="docs/ai-chat-decision-flow.png" />
 
 > [!TIP]
 > <img src="https://img.shields.io/badge/GitHub_Copilot-AI_Coding_Assistant-6e40c9?style=flat&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="22"/> &nbsp; **Need AI assistance for your code?** → Use **[GitHub Copilot](https://github.com/features/copilot)**!
 >
-> GitHub Copilot is your AI-powered coding assistant — available directly in your IDE. It provides intelligent code completions, an in-editor chat, pull request summaries, and automated code reviews. If your goal is to **write, understand, or review code faster**, GitHub Copilot is the right choice.
+> GitHub Copilot is your AI-powered coding assistant, available directly in your IDE. It provides intelligent code completions, an in-editor chat, pull request summaries, and automated code reviews. If your goal is to **write, understand, or review code faster**, GitHub Copilot is the right choice.
 >
 > | Feature | Details |
 > |---------|---------|
 > | **Where it works** | VS Code, JetBrains, Vim/Neovim, Visual Studio, Azure Data Studio, Xcode |
 > | **What it does** | Code completions, inline chat; slash commands: `/explain` (understand code), `/fix` (fix issues), `/test` (generate tests), PR summaries |
 > | **Languages** | 30+ including Python, JavaScript, TypeScript, Go, Java, C#, C++ |
-> | **Plans** | [Individual, Business, Enterprise](https://github.com/features/copilot#pricing) — **free tier** (2,000 completions + 50 chats/month) available to all GitHub users |
+> | **Plans** | [Individual, Business, Enterprise](https://github.com/features/copilot#pricing), **free tier** (2,000 completions + 50 chats/month) available to all GitHub users |
 > | **Docs** | [GitHub Copilot Documentation](https://docs.github.com/copilot) |
 
 > [!NOTE]

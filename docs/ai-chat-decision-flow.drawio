@@ -1,192 +1,199 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36">
   <diagram id="AI-Chat-Decision-Flow" name="Copilot Options (Vertical)">
-    <mxGraphModel dx="1281" dy="756" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1150" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+    <mxGraphModel dx="493" dy="371" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1150" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="Microsoft&amp;nbsp; -&amp;nbsp; AI Decision Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontColor=#111827;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="18" y="10" width="407" height="40" as="geometry" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontColor=#111827;fontStyle=1" value="Microsoft&amp;nbsp; -&amp;nbsp; AI Decision Flow" vertex="1">
+          <mxGeometry height="40" width="407" x="18" y="10" as="geometry" />
         </mxCell>
-        <mxCell id="start" value="I need AI chat\ncapabilities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=2;fontSize=16;fontColor=#1F2937;fontStyle=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="316.5" y="65" width="200" height="60" as="geometry" />
+        <mxCell id="start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;strokeWidth=2;fontSize=16;fontColor=#1F2937;fontStyle=1;align=center;" value="I need AI chat&lt;br&gt;capabilities" vertex="1">
+          <mxGeometry height="60" width="200" x="325.5" y="89" as="geometry" />
         </mxCell>
-        <mxCell id="q1" value="Use my own data sources?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=16;fontColor=#111827;fontStyle=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="325" y="178" width="200" height="60" as="geometry" />
+        <mxCell id="q1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=16;fontColor=#111827;fontStyle=1;align=center;" value="Use my own data sources?" vertex="1">
+          <mxGeometry height="60" width="200" x="325" y="228" as="geometry" />
         </mxCell>
-        <mxCell id="edge_start_q1" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;" parent="1" source="start" target="q1" edge="1">
+        <mxCell id="edge_start_q1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;" target="q1" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge_q1_copilot" value="NO" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" parent="1" source="q1" target="copilot" edge="1">
-          <mxGeometry x="-0.3" relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="290" y="210" />
-            </Array>
+        <mxCell id="edge_q1_copilot" edge="1" parent="1" source="q1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" target="copilot" value="No">
+          <mxGeometry relative="1" x="-0.3" as="geometry">
             <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="290" y="264" />
+              <mxPoint x="290" y="323" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="q2" value="Build your own interface?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=16;fontColor=#111827;fontStyle=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="645" y="176" width="200" height="60" as="geometry" />
+        <mxCell id="q2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=16;fontColor=#111827;fontStyle=1;align=center;" value="Build your own interface?" vertex="1">
+          <mxGeometry height="60" width="200" x="645" y="228" as="geometry" />
         </mxCell>
-        <mxCell id="edge_q1_q2" value="YES" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" parent="1" source="q1" target="q2" edge="1">
+        <mxCell id="edge_q1_q2" edge="1" parent="1" source="q1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" target="q2" value="&amp;nbsp;Yes&amp;nbsp;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge_q2_copilot365" value="NO" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" target="copilot365" edge="1">
-          <mxGeometry x="-0.3" relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="626" y="363" />
-              <mxPoint x="157" y="363" />
-            </Array>
+        <mxCell id="edge_q2_copilot365" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="copilot365" value="&amp;nbsp;No&amp;nbsp;">
+          <mxGeometry relative="1" x="-0.3" as="geometry">
             <mxPoint as="offset" />
-            <mxPoint x="626" y="344" as="sourcePoint" />
-            <mxPoint x="157" y="447" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="667" y="418" />
+              <mxPoint x="198" y="418" />
+            </Array>
+            <mxPoint x="667" y="399" as="sourcePoint" />
+            <mxPoint x="198" y="502" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q3" value="Need full developer control?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=16;fontColor=#111827;fontStyle=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="626" y="334" width="200" height="60" as="geometry" />
+        <mxCell id="q3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=16;fontColor=#111827;fontStyle=1;align=center;" value="Need full developer control?" vertex="1">
+          <mxGeometry height="60" width="200" x="667" y="389" as="geometry" />
         </mxCell>
-        <mxCell id="edge_q2_q3" value="YES" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" parent="1" source="q2" target="q3" edge="1">
+        <mxCell id="edge_q2_q3" edge="1" parent="1" source="q2" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" target="q3" value="Yes">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="688" y="382" />
-              <mxPoint x="736" y="382" />
+              <mxPoint x="736" y="309" />
+              <mxPoint x="736" y="309" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge_q3_copilotStudio" value="NO" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" parent="1" source="q3" target="copilotStudio" edge="1">
-          <mxGeometry x="-0.0282" relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="726" y="490" />
-              <mxPoint x="472" y="490" />
-            </Array>
+        <mxCell id="edge_q3_copilotStudio" edge="1" parent="1" source="q3" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" target="copilotStudio" value="&amp;nbsp;No&amp;nbsp;">
+          <mxGeometry relative="1" x="-0.0282" as="geometry">
             <mxPoint as="offset" />
-            <mxPoint x="728.0026315789476" y="539" as="sourcePoint" />
-            <mxPoint x="582" y="598" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="767" y="545" />
+              <mxPoint x="513" y="545" />
+            </Array>
+            <mxPoint x="769.0026315789476" y="594" as="sourcePoint" />
+            <mxPoint x="623" y="653" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge_q3_azureAI" value="YES" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" parent="1" source="q3" target="azureAI" edge="1">
+        <mxCell id="edge_q3_azureAI" edge="1" parent="1" source="q3" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" target="azureAI" value="&amp;nbsp;Yes&amp;nbsp;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="726" y="490" />
-              <mxPoint x="793" y="490" />
+              <mxPoint x="767" y="545" />
+              <mxPoint x="834" y="545" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="tech_considerations" value="Considerations" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#111827;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="70" y="665" width="350" height="40" as="geometry" />
+        <mxCell id="tech_considerations" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontColor=#111827;fontStyle=1" value="Considerations" vertex="1">
+          <mxGeometry height="40" width="350" x="70" y="747" as="geometry" />
         </mxCell>
-        <mxCell id="security_header" value="Security" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="25" y="720" width="150" height="30" as="geometry" />
+        <mxCell id="security_header" parent="1" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" value="Security" vertex="1">
+          <mxGeometry height="30" width="150" x="25" y="802" as="geometry" />
         </mxCell>
-        <mxCell id="security_details" value="• Entra ID auth across all solutions&#xa;• Content safety &amp; PII filtering options&#xa;• Data residency varies by service&#xa;• DLP and sensitivity labels in M365" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="1" vertex="1">
-          <mxGeometry x="25" y="750" width="250" height="70" as="geometry" />
+        <mxCell id="security_details" parent="1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Entra ID auth across all solutions&#xa;• Content safety &amp; PII filtering options&#xa;• Data residency varies by service&#xa;• DLP and sensitivity labels in M365" vertex="1">
+          <mxGeometry height="70" width="250" x="25" y="832" as="geometry" />
         </mxCell>
-        <mxCell id="networking_header" value="Networking" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="315" y="720" width="150" height="30" as="geometry" />
+        <mxCell id="networking_header" parent="1" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" value="Networking" vertex="1">
+          <mxGeometry height="30" width="150" x="315" y="802" as="geometry" />
         </mxCell>
-        <mxCell id="networking_details" value="• Internet-only for Microsoft Copilot&#xa;• M365 boundary for Copilot for M365&#xa;• Limited options in Copilot Studio&#xa;• Azure AI supports VNet &amp; egress controls" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="1" vertex="1">
-          <mxGeometry x="315" y="750" width="250" height="70" as="geometry" />
+        <mxCell id="networking_details" parent="1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Internet-only for Microsoft Copilot&#xa;• M365 boundary for Copilot for M365&#xa;• Limited options in Copilot Studio&#xa;• Azure AI supports VNet &amp; egress controls" vertex="1">
+          <mxGeometry height="70" width="250" x="315" y="832" as="geometry" />
         </mxCell>
-        <mxCell id="data_header" value="Data Sources" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="25" y="830" width="150" height="30" as="geometry" />
+        <mxCell id="data_header" parent="1" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" value="Data Sources" vertex="1">
+          <mxGeometry height="30" width="150" x="25" y="912" as="geometry" />
         </mxCell>
-        <mxCell id="data_details" value="• Web-only for Microsoft Copilot&#xa;• M365 Graph for Copilot for M365&#xa;• Dataverse, connectors in Copilot Studio&#xa;• Azure AI Search/vector DBs for RAG in Azure" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="1" vertex="1">
-          <mxGeometry x="25" y="860" width="250" height="79" as="geometry" />
+        <mxCell id="data_details" parent="1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Web-only for Microsoft Copilot&#xa;• M365 Graph for Copilot for M365&#xa;• Dataverse, connectors in Copilot Studio&#xa;• Azure AI Search/vector DBs for RAG in Azure" vertex="1">
+          <mxGeometry height="79" width="250" x="25" y="942" as="geometry" />
         </mxCell>
-        <mxCell id="cost_header" value="Pricing Models" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="315" y="830" width="150" height="30" as="geometry" />
+        <mxCell id="cost_header" parent="1" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" value="Pricing Models" vertex="1">
+          <mxGeometry height="30" width="150" x="315" y="912" as="geometry" />
         </mxCell>
-        <mxCell id="cost_details" value="• Included with some M365 SKUs&lt;br&gt;• Per-user licensing for M365 Copilot&lt;br&gt;• Capacity-based for Copilot Studio&lt;br&gt;• Pay-as-you-go for Azure AI Foundry" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="1" vertex="1">
-          <mxGeometry x="315" y="860" width="250" height="70" as="geometry" />
+        <mxCell id="cost_details" parent="1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Included with some M365 SKUs&lt;br&gt;• Per-user licensing for M365 Copilot&lt;br&gt;• Capacity-based for Copilot Studio&lt;br&gt;• Pay-as-you-go for Azure AI Foundry" vertex="1">
+          <mxGeometry height="70" width="250" x="315" y="942" as="geometry" />
         </mxCell>
-        <mxCell id="devops_header" value="DevOps &amp; Integration" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="20" y="958" width="150" height="30" as="geometry" />
+        <mxCell id="devops_header" parent="1" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" value="DevOps &amp; Integration" vertex="1">
+          <mxGeometry height="30" width="150" x="604" y="801" as="geometry" />
         </mxCell>
-        <mxCell id="devops_details" value="• Azure AI: Prompt Flow, CI/CD pipelines&#xa;• Power Platform ALM for Copilot Studio&#xa;• Graph API extensibility for M365&#xa;• App Insights/Log Analytics monitoring" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="1" vertex="1">
-          <mxGeometry x="20" y="988" width="250" height="70" as="geometry" />
+        <mxCell id="devops_details" parent="1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Azure AI: Prompt Flow, CI/CD pipelines&#xa;• Power Platform ALM for Copilot Studio&#xa;• Graph API extensibility for M365&#xa;• App Insights/Log Analytics monitoring" vertex="1">
+          <mxGeometry height="70" width="250" x="604" y="831" as="geometry" />
         </mxCell>
-        <mxCell id="sdk_header" value="Development" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="310" y="958" width="150" height="30" as="geometry" />
+        <mxCell id="sdk_header" parent="1" style="text;html=1;strokeColor=#E5E7EB;fillColor=#F3F4F6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontColor=#111827;fontStyle=1" value="Development" vertex="1">
+          <mxGeometry height="30" width="150" x="604" y="912" as="geometry" />
         </mxCell>
-        <mxCell id="sdk_details" value="• REST APIs across all services&#xa;• .NET, Python, JavaScript SDKs&#xa;• Power Platform connectors&#xa;• Azure AI: semantic kernel, langchain" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="1" vertex="1">
-          <mxGeometry x="310" y="988" width="250" height="70" as="geometry" />
+        <mxCell id="sdk_details" parent="1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• REST APIs across all services&#xa;• .NET, Python, JavaScript SDKs&#xa;• Power Platform connectors&#xa;• Azure AI: semantic kernel, langchain" vertex="1">
+          <mxGeometry height="70" width="250" x="604" y="942" as="geometry" />
         </mxCell>
-        <mxCell id="5dSzTPS8oh1tkHBNw1xO-2" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="604" y="562" width="234" height="149" as="geometry" />
+        <mxCell id="5dSzTPS8oh1tkHBNw1xO-2" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="149" width="234" x="645" y="617" as="geometry" />
         </mxCell>
-        <mxCell id="azureAI" value="Azure AI Foundry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" parent="5dSzTPS8oh1tkHBNw1xO-2" vertex="1">
-          <mxGeometry x="34" y="29" width="200" height="120" as="geometry" />
+        <mxCell id="azureAI" parent="5dSzTPS8oh1tkHBNw1xO-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" value="Azure AI Foundry" vertex="1">
+          <mxGeometry height="120" width="200" x="34" y="29" as="geometry" />
         </mxCell>
-        <mxCell id="tech_azureAI" value="• Full developer control over models&#xa;• RAG, tools, agents support&#xa;• VNet/Private Link networking&#xa;• Prompt Flow with CI/CD pipeline&#xa;• Pay-as-you-go pricing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="5dSzTPS8oh1tkHBNw1xO-2" vertex="1">
-          <mxGeometry x="39" y="59" width="190" height="90" as="geometry" />
+        <mxCell id="tech_azureAI" parent="5dSzTPS8oh1tkHBNw1xO-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Full developer control over models&#xa;• RAG, tools, agents support&#xa;• VNet/Private Link networking&#xa;• Prompt Flow with CI/CD pipeline&#xa;• Pay-as-you-go pricing" vertex="1">
+          <mxGeometry height="90" width="190" x="39" y="59" as="geometry" />
         </mxCell>
-        <mxCell id="ckCx5_nQSzO7ibG-94to-6" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/ai_machine_learning/AI_Studio.svg;" parent="5dSzTPS8oh1tkHBNw1xO-2" vertex="1">
-          <mxGeometry width="64" height="68" as="geometry" />
+        <mxCell id="ckCx5_nQSzO7ibG-94to-6" parent="5dSzTPS8oh1tkHBNw1xO-2" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/ai_machine_learning/AI_Studio.svg;" value="" vertex="1">
+          <mxGeometry height="68" width="64" as="geometry" />
         </mxCell>
-        <mxCell id="5dSzTPS8oh1tkHBNw1xO-3" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="331" y="542" width="234" height="156" as="geometry" />
+        <mxCell id="5dSzTPS8oh1tkHBNw1xO-3" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="156" width="234" x="372" y="597" as="geometry" />
         </mxCell>
-        <mxCell id="copilotStudio" value="Microsoft Copilot Studio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" parent="5dSzTPS8oh1tkHBNw1xO-3" vertex="1">
-          <mxGeometry x="42.9974678111588" y="35.99898734177214" width="180.77253218884118" height="118.48101265822784" as="geometry" />
+        <mxCell id="copilotStudio" parent="5dSzTPS8oh1tkHBNw1xO-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" value="Microsoft Copilot Studio" vertex="1">
+          <mxGeometry height="118.48101265822784" width="180.77253218884118" x="42.9974678111588" y="35.99898734177214" as="geometry" />
         </mxCell>
-        <mxCell id="tech_copilotStudio" value="• Low-code chatbot builder&#xa;• Supports various data sources&#xa;• Built-in connectors to apps&#xa;• Capacity-based licensing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="5dSzTPS8oh1tkHBNw1xO-3" vertex="1">
-          <mxGeometry x="56.00325774728804" y="72.00342232451094" width="170.7296137339056" height="88.86075949367087" as="geometry" />
+        <mxCell id="tech_copilotStudio" parent="5dSzTPS8oh1tkHBNw1xO-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Low-code chatbot builder&#xa;• Supports various data sources&#xa;• Built-in connectors to apps&#xa;• Capacity-based licensing" vertex="1">
+          <mxGeometry height="88.86075949367087" width="170.7296137339056" x="56.00325774728804" y="72.00342232451094" as="geometry" />
         </mxCell>
-        <mxCell id="ckCx5_nQSzO7ibG-94to-5" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/power_platform/CopilotStudio.svg;" parent="5dSzTPS8oh1tkHBNw1xO-3" vertex="1">
-          <mxGeometry x="15" y="9" width="49.64764104541968" height="45.50060279339051" as="geometry" />
+        <mxCell id="ckCx5_nQSzO7ibG-94to-5" parent="5dSzTPS8oh1tkHBNw1xO-3" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/power_platform/CopilotStudio.svg;" value="" vertex="1">
+          <mxGeometry height="45.50060279339051" width="49.64764104541968" x="15" y="9" as="geometry" />
         </mxCell>
-        <mxCell id="5dSzTPS8oh1tkHBNw1xO-4" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="48.99995117187501" y="463" width="239.000048828125" height="120" as="geometry" />
+        <mxCell id="5dSzTPS8oh1tkHBNw1xO-4" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="120" width="239.000048828125" x="89.99995117187501" y="518" as="geometry" />
         </mxCell>
-        <mxCell id="copilot365" value="Microsoft Copilot for M365" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" parent="5dSzTPS8oh1tkHBNw1xO-4" vertex="1">
-          <mxGeometry x="33.00004882812499" width="206" height="120" as="geometry" />
+        <mxCell id="copilot365" parent="5dSzTPS8oh1tkHBNw1xO-4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" value="Microsoft Copilot for M365" vertex="1">
+          <mxGeometry height="120" width="206" x="33.00004882812499" as="geometry" />
         </mxCell>
-        <mxCell id="tech_copilot365" value="• Uses Microsoft Graph data&#xa;• Integrated into M365 applications&#xa;• Extensible with plugins/connectors&#xa;• Per-user licensing model" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="5dSzTPS8oh1tkHBNw1xO-4" vertex="1">
-          <mxGeometry x="51.00004882812499" y="27" width="170" height="90" as="geometry" />
+        <mxCell id="tech_copilot365" parent="5dSzTPS8oh1tkHBNw1xO-4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Uses Microsoft Graph data&#xa;• Integrated into M365 applications&#xa;• Extensible with plugins/connectors&#xa;• Per-user licensing model" vertex="1">
+          <mxGeometry height="90" width="170" x="51.00004882812499" y="27" as="geometry" />
         </mxCell>
-        <mxCell id="ckCx5_nQSzO7ibG-94to-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAADMAAABDCAYAAAAxgz3rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA3NSURBVGhD7ZlLjBzXdYa/c++t6p4HX0NSD1IhRYaUTDuUbCuKLMvyM8nCyCIJDCTILvE+WWWRrAIEWdlZBdkkqwAO4oXjJJBlRQosWzIk6xGIEiVTD3JG5FDi8DEznGd3Vd3HyeJWN2coaviQFNCCfuCiuqunp+5X/znnnrotqqp8TGQuP/GrrE9gblZ9AnOz6hOYm1WfwNysko+6A0hJ8THhvRKTooA1QuGEwhqMAREAufyr162PFGZltWHqzCqvTi1zdLLP2bkGn2D7lg6H9o5yz/4xDtwxwi1bOxh7k8GoKiKQIpyb7fHE8+/y3GvzzFxMrFSWJhnAUBaG0Y5h57aSw/vHePierdy1Z5TxEYtkm25IHxqMqqIo1Upi8vgi//nUcZ55/QLLTQGug3VdxDpELCKgCogy2nHs29XhoXu2cN/dmzm4exRjbgzoQ4FRVYJPzM40nDi6xGPPvMHPJ6eppIPrjuPKUUwxgDH57isoCRXBFobNmxyf2jvK1z47wX0HRpkYL67bpQ8ME2Niac5zZrJm+o0+L//yHX46eZRz3lOObqMYGceWI5ihMwZBch0VAQdYQY1gjLBzW4cvH97CFw6Oc+iOLiOlvfyS76sbhFFiVOpe5MK7DSdfqzh7os/qSsPRs8d5+vQxUjFGOboNtxbGOMQIIoJaA1aQdqjN57GCc4YDuzr8zuGt3H9gjJ1jlsK1jm6g64ZRBd9EZmcapo9XzJzos3wuYFWpfc2zp17lF2dP4EYm6IxuvQRjO+AcYi1iBZxpQUx2yRrEkiERksD2ccfn9o3y0MFx7tk9wpYRi90gn64DRgleWVmOnDzRZ+rVHhfPNlAppREKgaX+Ck9OHeHo7DsUY5fBuC7iHFI41IF1NrthDWJAncmuWYMaBRGSCEaE2ycKvrR/jC8fGOPXJkrGigx0uVPX2AEoTZOYnKx4+icLvPD0Iu9O14QmYUQwoghC0ojX0C6C674OwjCkxFqwph3ZJeME2iHOIoXFlQZK4d3lwI/eWOGfnl/gibeWmV0NpNRWxDW6Jpiqjvzviys8+T/zvPV6j+XlCLQx3s41v1CuaLQo2oaSOkGGkxakEKQwaCHQvqYwUAClwRQW1zXURvjlfMP3XlnhX48uc3rJEy+71lVhQlR+eazP8y8uMjfniSnb21ZX1ICqIaGoXAJcJ2MwJjthnEWcwbjBa5tDzFmMs1AYTJEhcBYtLRQW07FIaVlVeHK6z39P9pjrxXXubAijmjhzpuK5Fxa5uBBJMVubGAwhkoiSiAlC69J7vcmlWEwuw4Ohax1qXcPl8+oMUgjWgnGm/TuDlIYewk9PV/zi3T4hXbrahjAhwIlTFefmAjEqSZSk5JGXPCJCBIJAbD8bSrV1UVBjUGPACMaaNk9MhrB5sqbI56VohzNoG3bGDRwzFB3LXITXFwLxWp2pfeL14z0qn0gIKpKBgEgiAAFpj0rQ7JxkL/LfJ6hjovKRmBIRoa9KlfINUMsw+XO4tcNmZ0yZ3aC0UBoocnGwpWVyOa2D2bA0X1z0/N0/nCY2UCIUIhQoTg1OFCdQIBgEq4mF3hLPTh1h6uJZ3MhWpLOVnbft4Dfv3cXnP7WdW3d0cYWwVEdOXPC8dKbm3V4g2Tb5BxBGchdtDckwLNnDu9SudzbBv/32BJsGpXojmPmFhr/+7jQFlo7RFkZwCg7BocMUMCos9hZ4bvIlJufPUoxt51vf/Czf/Np+7tw1zubRkrIwiEBMSq+OnF0NvHi65rHJHjP9iC0lF4G2vZHBQmokF5ABjOTErKPyH1/ddm0wcwuev/ruNCUmV0tRCgwWpUCwCFbBCBiUpd4SR069gozVfPtPHuLh39rH5vEO9grPKkpuUCuvHJ9reGSyx5HZhp7ktcc4AzaH6rBTEG0XrPw/ap/44Ze2XjvMX353mlLy5AuEwmQIB1gU2yaeUQFTs3NvxZcevo0792ynLK7h+UQhqnKxirwwU/Hvby4xEy10ilzlTOuSM4jkzmDwxcrDDx/cxCaXz21YABSIKB4hCnigUcUzGNKOnMxbto3xwH37ObDvFjqFuzoIbdUW2DHq+PxY5OBbx5AXj8DcLBjNSV/mnBpUNi0MWth8fo02hKGtUrGtWFGUqEJQJQyBoEFogGANtmhb9mvgGGgA7UQZWVrF/fwI8uhT6Cuvo70+UuTFVNq1R8pBl7B++hvCKBBUCKR894EgildoEvjWpQFYIJftG5fgjKXrlWLyDOaxZ9FHn0bfmMSgSNdC2XYQRVuy19y0DWEgL4RRdRhuHsVLdsSr0CRoFBoUr0p6/xS8uozgrKPb6TLiSsrFHu75Y+gPniQ+9gzMXsxlurC5h2tzZfj1de+uIC+JRoUmCV5jhgAaaT+TREOkSVCFRO0/gDcRNAjdoku3HGGk7NIxhuKdWXj8ecL3niD84lVSVQ37vLXWbAij7QofRQmiOeRU1+RM/txj8KKsNsriSrxy53wVqSpNFektekpXUhYdyqJLx3XpdkYoVj3mpTfRH/wMffw5dG4hd+LXE2bZCSGgNKI0KniVYb40KA3QAMtN5NyCx4frh0lJWb7Yp1qJFEVJORwdOkWHbrdLaUvsmXn0sedJT78Ci6vrHmquCpP7rgEQeGknr3IpV9p8WfXK2+dqZuY8aV3HeXVVq57TxxfwfaVwBYUtskPuEli37NDtdCkW+shTr6CvTkG8FNYbwuQwUxpS68KgALTvW5dqhVqhl5TXz9Q89doyS71rDzffRKbfmufEy+chgbMO5/IoXIFzJYUrKV2HsijpdLsU5xcxr528dhjIlSo7MwirvKY0kqtaoznUeiirJM71I48dWeDxlxdY7IUNgVSVpg5MvzXP0Z+dZvFCDxSsGKxYnDiccTjrKGxJYTNc6Tp0TIE7dWE9TEqJ9xsxJTyJOkKdBK/gScMcqVWpSPRSYiVFlmNgJQZOXqz455+c5fvPnGfqfEXlIymlIZiqEmOit9QwdXSWlx4/zZnJJVIAYyzGWuya4WwGsrbAtaMsO3QuLCFrc2bw8HTlAUmEIO06o5rXFlVqVfqqrKqyqonVlKH6ybMaPacW+nzn0Wm+88hJfnzkPOcWGkLMewS+jpw/ucrRn57lxR+9w5njS2gA015TaPvJdh5GDCL50dsY2wI7Ol7XPdZK2iBTLyx5/ugfTzG/mjCqWCN5N7LduEjkRTJpIqZ895MGfIiEFPAxUNcNu7ZZfu/eHfzh/bu4c9Mos1OrTL08y7lTy1T9hqSJEAI+enwMhBgJPhCjJ7T/O4RA1PaYIikmio7l77//bcY2deBqOVMWwmf2dMFBLVAp2Y3WhV4M9JKnFxt6wdOPNf3QUIWK2lc0TZ8U+7x9Zo5/eeJN/uuRt3nhxzO8+pPzXHi7h0byc8pa6aVO/9IO+6Vdn7xXbUCF2/dsX/dTyIYwI4XhoYOjlGXOjx5KL0UqjfQ10I+RKgSq4Kl8TdU01E1F01T56PvQVOwvS741sZu98yMsn2wIVULancnhVNaElUiOABXJEdAGT+bJoWWsYe9dt2LX3IwNYQor3Ld3lAO3dokC/Rjop0A/enrRU8WGytfUvqYJFU3o09R9fNMn1Kt0fM0f7NzNX+w5xNd33M7OThf3nrx87xg8TWZzTAbSXJRUlRgC22/dxF2fuS3vH7TaEEZEuOu2Ln/2xW3cud0AgSZmJ5qmpm5akKafR90n+h4u1ny6O8rfHPgcf7z719ndHcWtmeRaF1jjBJc71c5BRFDNW18xRkY3dXn4m4e494v7sDbDqurGMAApwTfuHufPv7qDQ7cUOIkE3+BDjQ99ou8TfJ/UVDhfc7tx/OntB/jbTz/APVt3YDZYZ65Pedtq09ZRvvb7v8GDv3s33RE3BFHVjavZUJp3SF6ZXuEHL1zg2WNznL7QY7mqINaMCdxSlNw9spmv3rKLQ5smCDFQe48PgZACIQZizNWoiZ4Q2qoVBhUsDx/WH0MIVHVNZ8yy79BOHvjGXRy+fw9Fx10+y2uEaSVAr468/XbFsddWeWe6IvQTE0XBrs4YE2UHZ6DxnhgCTYz44DPE2gm3k8zleC1Iho8x4kOgbhpi8tx65xbu+8p+7vnCXrbtGM2biFfQdcFk5R+a/DKszsDiJPTOJWJIRE3ZhcFEB+tDjOsmPbjjIUW89+sgB+/rxrN1R5fPPLibT92/mzv2TVCWOazkffYWbgAmtyMopAD1grIwlZg97qmXc8UZ3vkWJp9rw2kI59swuwTno6cJHrGw5+4J7vvGXvYc3M7IWPm+bqzVDcGslSqEvrJyPnL+zYa5EzWhiXifYWLM3cBw0rHNlfY4CMOYIj55tuzocu/X93Dw8E627hjFuuv4TfODwtACaVTqlcj8lGfmWM3S+Yqmbp1Ia3NmLVyGUUl0xgvuuHszhx/ezS27N9HpujV7ZNemDwUG2ocfUUKtrMx6Zo5VnDu+wtJ8jW8y0BAqRBqfe7JixLBz3zgHPr+TOw5sZvPEyPvmxNX04cG0UhRN4KvI+cmKmTeXmT9TsTTXp79S45sIRaIzbtm8s2TXgc3sO7ydrbd2ccX6DYrr1YcOc0lK9EpTR5p+oukHQpPbETFQdCydEUtnxFF07bBX+yD6CGGuoLXz/QiuevV692FK14yPQP+/MB+xPlYwEuPaXwV/tSUh3MD2402qj5UzH6uc+QTm5tB7F6xfQZgBxGB3ZACk/B+VCIkST1M2lwAAAABJRU5ErkJggg==;" parent="5dSzTPS8oh1tkHBNw1xO-4" vertex="1">
-          <mxGeometry y="41.99998779296874" width="51" height="67" as="geometry" />
+        <mxCell id="ckCx5_nQSzO7ibG-94to-2" parent="5dSzTPS8oh1tkHBNw1xO-4" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,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;" value="" vertex="1">
+          <mxGeometry height="67" width="51" x="2" y="29.99998779296874" as="geometry" />
         </mxCell>
-        <mxCell id="5dSzTPS8oh1tkHBNw1xO-5" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry y="135" width="210" height="202" as="geometry" />
+        <mxCell id="5dSzTPS8oh1tkHBNw1xO-5" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="202" width="210" x="8" y="195" as="geometry" />
         </mxCell>
-        <mxCell id="copilot" value="Microsoft Copilot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" parent="5dSzTPS8oh1tkHBNw1xO-5" vertex="1">
-          <mxGeometry x="30" y="53.19" width="180" height="148.81" as="geometry" />
+        <mxCell id="copilot" parent="5dSzTPS8oh1tkHBNw1xO-5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" value="Microsoft Copilot" vertex="1">
+          <mxGeometry height="148.81" width="180" x="30" y="53.19" as="geometry" />
         </mxCell>
-        <mxCell id="tech_copilot" value="• Uses OpenAI models with web data&#xa;• Data protected from AI training&#xa;• No additional cost for M365 SKUs&#xa;• Browser-based interface" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="5dSzTPS8oh1tkHBNw1xO-5" vertex="1">
-          <mxGeometry x="35.00004069009469" y="87.14372002013648" width="169.99996047247944" height="101.85627997986352" as="geometry" />
+        <mxCell id="tech_copilot" parent="5dSzTPS8oh1tkHBNw1xO-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• Uses OpenAI models with web data&#xa;• Data protected from AI training&#xa;• No additional cost for M365 SKUs&#xa;• Browser-based interface" vertex="1">
+          <mxGeometry height="101.85627997986352" width="169.99996047247944" x="35.00004069009469" y="87.14372002013648" as="geometry" />
         </mxCell>
-        <mxCell id="ckCx5_nQSzO7ibG-94to-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,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;" parent="5dSzTPS8oh1tkHBNw1xO-5" vertex="1">
-          <mxGeometry y="26" width="51.999987909229006" height="54.99998721168453" as="geometry" />
+        <mxCell id="ckCx5_nQSzO7ibG-94to-1" parent="5dSzTPS8oh1tkHBNw1xO-5" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,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;" value="" vertex="1">
+          <mxGeometry height="54.99998721168453" width="51.999987909229006" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="q_coding" value="Need AI coding assistance?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=16;fontColor=#111827;fontStyle=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="860" y="65" width="220" height="60" as="geometry" />
+        <mxCell id="q_coding" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=16;fontColor=#111827;fontStyle=1;align=center;" value="Need AI coding assistance?" vertex="1">
+          <mxGeometry height="60" width="220" x="926" y="390" as="geometry" />
         </mxCell>
-        <mxCell id="edge_start_qcoding" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="start" target="q_coding" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="githubCopilotGroup" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="200" width="210" x="918" y="502" as="geometry" />
         </mxCell>
-        <mxCell id="githubCopilotGroup" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="857" y="185" width="238" height="195" as="geometry" />
+        <mxCell id="githubCopilot" parent="githubCopilotGroup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" value="GitHub Copilot" vertex="1">
+          <mxGeometry height="148.81" width="180" x="30" y="51" as="geometry" />
         </mxCell>
-        <mxCell id="githubCopilot" value="GitHub Copilot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=2;shadow=1;fontSize=16;fontColor=#111827;fontStyle=1;align=center;verticalAlign=top;" parent="githubCopilotGroup" vertex="1">
-          <mxGeometry x="30" y="10" width="208" height="185" as="geometry" />
+        <mxCell id="tech_githubCopilot" parent="githubCopilotGroup" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" value="• AI coding assistant in your IDE&#xa;• Code completion, chat &amp; explanations&#xa;• Works in VS Code, JetBrains, etc.&#xa;• Supports 30+ programming languages&#xa;• GitHub.com subscription required" vertex="1">
+          <mxGeometry height="120" width="170" x="35" y="82" as="geometry" />
         </mxCell>
-        <mxCell id="tech_githubCopilot" value="• AI coding assistant in your IDE&#xa;• Code completion, chat &amp; explanations&#xa;• Works in VS Code, JetBrains, etc.&#xa;• Supports 30+ programming languages&#xa;• GitHub.com subscription required" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;fontColor=#111827;" parent="githubCopilotGroup" vertex="1">
-          <mxGeometry x="35" y="60" width="195" height="120" as="geometry" />
+        <mxCell id="xM6kaozn2AkGPzPNIMnT-1" parent="githubCopilotGroup" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github" value="" vertex="1">
+          <mxGeometry height="48" width="52" y="24" as="geometry" />
         </mxCell>
-        <mxCell id="githubCopilotIcon" value="" style="shape=image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0iIzZlNDBjOSIvPgogIDxjaXJjbGUgY3g9IjM1IiBjeT0iNDAiIHI9IjExIiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjY1IiBjeT0iNDAiIHI9IjExIiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjM1IiBjeT0iNDAiIHI9IjUiIGZpbGw9IiM2ZTQwYzkiLz4KICA8Y2lyY2xlIGN4PSI2NSIgY3k9IjQwIiByPSI1IiBmaWxsPSIjNmU0MGM5Ii8+CiAgPHBhdGggZD0iTSAyOCA2MiBRIDUwIDc1IDcyIDYyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=" parent="githubCopilotGroup" vertex="1">
-          <mxGeometry y="18" width="54" height="54" as="geometry" />
-        </mxCell>
-        <mxCell id="edge_qcoding_ghcopilot" value="YES" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" parent="1" source="q_coding" target="githubCopilot" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="edge_qcoding_no" value="NO" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="q_coding" target="q1" edge="1">
-          <mxGeometry x="-0.3" relative="1" as="geometry">
+        <mxCell id="edge_qcoding_ghcopilot" edge="1" parent="1" source="q_coding" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;" target="githubCopilot" value="">
+          <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="830" y="95" />
-              <mxPoint x="830" y="208" />
-              <mxPoint x="525" y="208" />
+              <mxPoint x="1039" y="447" />
+              <mxPoint x="1039" y="447" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J1BRoLJENCsj9um7ZoET-5" connectable="0" parent="edge_qcoding_ghcopilot" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Yes" vertex="1">
+          <mxGeometry relative="1" x="-0.2711" y="-2" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J1BRoLJENCsj9um7ZoET-4" edge="1" parent="1" source="q3" style="edgeStyle=orthogonalEdgeStyle;endArrow=classic;endSize=10;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=3;fontColor=#111827;fontStyle=1;fontSize=14;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="q_coding" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="918" y="419" />
+            </Array>
+            <mxPoint x="918" y="423" as="sourcePoint" />
+            <mxPoint x="918" y="526" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
