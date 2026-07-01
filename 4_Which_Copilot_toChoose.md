@@ -83,9 +83,9 @@ Last updated: 2026-04-06
 > | Feature | Details |
 > |---------|---------|
 > | **Where it works** | VS Code, JetBrains, Vim/Neovim, Visual Studio, Azure Data Studio, Xcode |
-> | **What it does** | Code completions, inline chat, `/explain`, `/fix`, `/test`, PR summaries |
+> | **What it does** | Code completions, inline chat; slash commands: `/explain` (understand code), `/fix` (fix issues), `/test` (generate tests), PR summaries |
 > | **Languages** | 30+ including Python, JavaScript, TypeScript, Go, Java, C#, C++ |
-> | **Plans** | [Individual, Business, Enterprise](https://github.com/features/copilot#pricing) — free tier available |
+> | **Plans** | [Individual, Business, Enterprise](https://github.com/features/copilot#pricing) — **free tier** (2,000 completions + 50 chats/month) available to all GitHub users |
 > | **Docs** | [GitHub Copilot Documentation](https://docs.github.com/copilot) |
 
 > [!NOTE]
@@ -103,7 +103,7 @@ Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
 | Develop a **RAG** app or **multi-agent** solution with fine control over models, evals, safety, and infra | **Azure AI Foundry (Azure AI Studio)**                  | Unified SDK/APIs, integrates Azure OpenAI & Cognitive Services, deep ops control | Best for pro-code; aligns with PaaS patterns in CAF.                  |
 | Extend M365 Copilot with **task-specific agents** using declarative tools                                 | **Agents for M365 Copilot** (via Copilot Studio & SDKs) | Purpose-built extensions that run inside M365 Copilot orchestrator               | See tool comparison & planning guide.   |
 | Personal, **non-sensitive** queries with image creation                                                   | **Microsoft Copilot (consumer)**                        | Free web-grounded assistant                                                      | Don’t use for confidential work content. |
-| Need **AI assistance for coding** — completions, chat, PR reviews, test generation — in your IDE         | <img src="https://img.shields.io/badge/GitHub-Copilot-6e40c9?logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="18"/> **[GitHub Copilot](https://github.com/features/copilot)** | AI pair programmer embedded in your editor; works across 30+ languages | Requires GitHub.com subscription; Individual, Business & Enterprise plans; free tier available. |
+| Need **AI assistance for coding** — completions, chat, PR reviews, test generation — in your IDE         | <img src="https://img.shields.io/badge/GitHub-Copilot-6e40c9?logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="18"/> **[GitHub Copilot](https://github.com/features/copilot)** | AI pair programmer embedded in your editor; works across 30+ languages | **Free tier** available (2,000 completions + 50 chat messages/month); paid Individual, Business & Enterprise plans also available. |
 
 </details>
 
