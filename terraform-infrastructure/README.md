@@ -1,14 +1,5 @@
 # Azure Infrastructure Terraform Templates
 
-Costa Rica
-
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-04-06
-
-----------
-
 > This approach focuses on `setting up the required infrastructure via Terraform`. It allows for source control of not only the solution code, connections, and setups `but also the infrastructure itself`.
 
 <div align="center">
@@ -112,10 +103,3 @@ graph TD;
         > At the end, you will see a message in green if everything was executed successfully:
 
         <img width="550" alt="image" src="https://github.com/user-attachments/assets/f2089d03-3a3d-431d-b462-8148ef519104">
-
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->

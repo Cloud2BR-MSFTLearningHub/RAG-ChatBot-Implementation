@@ -1,14 +1,5 @@
 # Initial AI Questions - Overview
 
-Costa Rica
-
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-04-06
-
-----------
-
 | **Category**              | **Question to Ask**                                                                 | **Example Response**                                                                 | **Purpose** |
 |--------------------------|-------------------------------------------------------|------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | **Business Objective**   | What problem are you trying to solve with AI?                                       | `We want to reduce manual ticket triage time.`                                     | Understand the core use case and business value.|
@@ -26,10 +17,3 @@ Last updated: 2026-04-06
 | **Scalability**          | How many users or transactions do you expect the AI to handle?                      | `We expect 10,000+ daily interactions.`                                            | Determines infrastructure sizing and cost implications.|
 | **Budget & Timeline**    | What’s your budget and timeline for this initiative?                                | `We have a 3-month window and a $50K budget.`                                      | Helps prioritize scope and feasibility.|
 | **Success Metrics**      | How will you measure the success of this AI solution?                               | `Reduction in ticket resolution time by 30%.`                                      | Aligns technical goals with business KPIs.|
-
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->

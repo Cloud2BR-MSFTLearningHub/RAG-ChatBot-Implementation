@@ -1,15 +1,5 @@
 # Demonstration: Azure Open AI \& AI Foundry Pricing
 
-Costa Rica
-
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-04-06
-
-----------
-
 !!! note
     Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
 
@@ -168,10 +158,3 @@ This means with 50 PTUs, you can process 75,000 tokens per minute.
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/540a1fd2-cae1-445c-8ca8-a0123cc63d7e" />
 
 <https://github.com/user-attachments/assets/27beba15-57d6-4a2b-943e-496829644dbe>
-
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->

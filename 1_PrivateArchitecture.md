@@ -1,15 +1,5 @@
 # Demonstration: Building a Private ChatBot with Azure OpenAI
 
-Costa Rica
-
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-04-06
-
-----------
-
 > This demo is about how to setup secure document searches within a designated network, ensuring that your data remains protected while leveraging the capabilities of Azure OpenAI. <br/>
 
 > You could use the `RAG pattern` to improve the search experience in your web application. For instance, when a `user queries the search system`, it can retrieve `relevant documents from Azure Storage Blob` Containers and use the `retrieved information to generate a more accurate and detailed search result`. [Click here for more information about RAG](./0_RAG_Overview.md).
@@ -286,10 +276,3 @@ graph TD
           2. **Content Filters**: Use `Content filters` to manage the content filtering settings for your deployment.<br/>
           3. **Data Files**: Manage your data files in the `Data files` section.<br/>
           4. **Vector Stores**: Use `Vector stores` to manage vector representations of your data.<br/>
-
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->

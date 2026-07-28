@@ -1,14 +1,5 @@
 # Application Redeployment - Quick Guide
 
-Costa Rica
-
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-04-06
-
-------------------------------------------
-
 > How to redeploy your application using the Azure Developer CLI:
 
 1. Use the Virtual Machine connected via Bastion, log into the VM using the username and authenticate with the password stored in the keyvault.
@@ -18,10 +9,3 @@ Last updated: 2026-04-06
 5. Updates your environment settings with the latest configuration, run: `azd env refresh`
 6. Builds and packages your application code into deployable artifacts without deploying them to Azure, run: `azd package`
 7. Deploys your project to Azure, run: `azd deploy`
-
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->

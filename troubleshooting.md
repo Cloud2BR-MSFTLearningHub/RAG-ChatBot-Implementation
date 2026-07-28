@@ -1,14 +1,5 @@
 # Troubleshooting: Known Errors
 
-Costa Rica
-
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-04-06
-
-------------------------------------------
-
 <details markdown="1">
 <summary><b>Table of Content </b> (Click to expand)</summary>
 
@@ -37,10 +28,3 @@ increase request following: https://aka.ms/AddQuotaSubscription.
 2. In the `AI search SKU name` configuration section, you can modify the SKU being used. To do this, for example update the definition in line [336, which currently references standard2/standard](https://github.com/MicrosoftCloudEssentials-LearningHub/RAG-ChatBot-Implementation/blob/main/GPT-RAG_SolutionAccelerator/infra/main.bicep#L386), and replace it with the definition in line [335, which specifies standard/basic](https://github.com/MicrosoftCloudEssentials-LearningHub/RAG-ChatBot-Implementation/blob/main/GPT-RAG_SolutionAccelerator/infra/main.bicep#L385)
 
     <https://github.com/user-attachments/assets/8cc518e2-12f7-427e-9572-ecdccb931a86>
-
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->

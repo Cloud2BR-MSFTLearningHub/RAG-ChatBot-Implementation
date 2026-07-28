@@ -1,15 +1,5 @@
 # Demonstration: Azure AI Search Pricing
 
-Costa Rica
-
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
-
-Last updated: 2026-04-06
-
-----------
-
 !!! note
     Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
 
@@ -63,10 +53,3 @@ Last updated: 2026-04-06
 - **Suggested tier**: `Standard S2 or S3 with 3 replicas, 2 partitions`
 
 <https://github.com/user-attachments/assets/809199a9-8a3f-4540-b4fa-d6358e685c01>
-
-<!-- START BADGE -->
-<div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1309-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-07-01</p>
-</div>
-<!-- END BADGE -->
