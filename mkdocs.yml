@@ -1,0 +1,77 @@
+site_name: RAG ChatBot Implementation Hub
+site_description: Architecture and deployment guidance for a Retrieval-Augmented Generation chat bot on Azure.
+site_url: https://cloud2br-msftlearninghub.github.io/RAG-ChatBot-Implementation/
+repo_url: https://github.com/Cloud2BR-MSFTLearningHub/RAG-ChatBot-Implementation
+repo_name: Cloud2BR-MSFTLearningHub/RAG-ChatBot-Implementation
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+copyright: Copyright &copy; 2026 <a href="https://github.com/Cloud2BR-MSFTLearningHub" target="_blank" rel="noopener">Cloud2BR OSS - Learning Hub</a>
+
+theme:
+  name: material
+  logo: https://avatars.githubusercontent.com/u/195347873?v=4
+  favicon: https://avatars.githubusercontent.com/u/195347873?v=4
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.highlight
+  - pymdownx.snippets:
+      base_path:
+        - .
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/css/custom.css
+extra_javascript:
+  - assets/js/logo-link.js
+  - assets/js/external-links.js
+  - path: assets/js/mermaid.js
+    type: module
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Cloud2BR-MSFTLearningHub
+      name: Cloud2BR OSS - Learning Hub
+
+nav:
+  - Home: index.md
+  - Architecture:
+    - RAG pattern overview: 0_RAG_Overview.md
+    - Private chatbot: 1_PrivateArchitecture.md
+    - Zero Trust RAG: 2_ZeroTrustOverview.md
+    - Terraform infrastructure: terraform-infrastructure/README.md
+  - Pricing:
+    - Overview: 3_PricingDemos/README.md
+    - Azure AI Document Intelligence: 3_PricingDemos/0_Doc-Intellig.md
+    - Azure AI Search: 3_PricingDemos/1_AI-Search.md
+    - Azure OpenAI and AI Foundry: 3_PricingDemos/2_AOAI-AIFoundry.md
+  - Planning:
+    - Choose a Copilot platform: 4_Which_Copilot_toChoose.md
+    - Initial AI questions: 5_AI_Initial_Questions.md
+  - Operations:
+    - Modify the solution: how-modify.md
+    - Redeploy the application: how-redeploy-app.md
+    - Troubleshooting: troubleshooting.md

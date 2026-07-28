@@ -2,7 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com) 
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
@@ -14,14 +14,14 @@ Last updated: 2026-04-06
 
 > You could use the `RAG pattern` to improve the search experience in your web application. For instance, when a `user queries the search system`, it can retrieve `relevant documents from Azure Storage Blob` Containers and use the `retrieved information to generate a more accurate and detailed search result`. [Click here for more information about RAG](./0_RAG_Overview.md).
 
-<details>
+<details markdown="1">
 <summary><b>List of References </b> (Click to expand)</summary>
-  
+
 - [Create a private endpoint for a secure connection to Azure AI Search](https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#use-the-azure-portal-to-access-a-private-search-service)
- 
+
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Table of Contents</b> (Click to expand)</summary>
 
 - [Overview](#overview)
@@ -33,7 +33,7 @@ Last updated: 2026-04-06
 - [Set Up Network Security Groups NSGs](#set-up-network-security-groups-nsgs)
 - [Create index/Upload Documents](#create-indexupload-documents)
 - [Configure and Deploy AI model](#configure-and-deploy-ai-model)
- 
+
 </details>
 
 ## Overview
@@ -60,7 +60,7 @@ Click here to see more about [Workflow in Zero Trust Architecture](./2_ZeroTrust
 - Review and Create: Review your configuration and select `Create`.
 
      <img width="550" alt="image" src="https://github.com/user-attachments/assets/51f14c45-4167-48cb-9961-fa291ef78fea">
-    
+
      <img width="550" alt="image" src="https://github.com/user-attachments/assets/d68922eb-b54d-4257-82aa-2d8e45128e32">
 
 ### Set Up Azure AI Search
@@ -71,11 +71,11 @@ Click here to see more about [Workflow in Zero Trust Architecture](./2_ZeroTrust
   - Resource Group: Use the same resource group as your Azure OpenAI resource.
   - Location: Use the same region for reduced latency.
   - Pricing Tier: Select a pricing tier based on your needs.
-  
+
       <img width="550" alt="image" src="https://github.com/user-attachments/assets/09222c27-994f-44b6-bf04-fa9c3d0fb07e">
-  
+
       <img width="550" alt="image" src="https://github.com/user-attachments/assets/9420a863-f22c-4236-9687-9e3799af15c8">
-      
+
 - Establish the network connection by choosing to either set up the resource with a public configuration and adjust the network settings later, or integrate the network configuration during the resource creation process.
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/b16c4621-9645-4c8f-9378-fb6674a7f7c6">
@@ -86,7 +86,7 @@ Click here to see more about [Workflow in Zero Trust Architecture](./2_ZeroTrust
     | **Selected IP addresses** | Restricts access to specified public IP addresses.                         | Scenarios where you know the IP addresses of the clients that need to connect. |
     | **Disabled**            | Disables public network access entirely.                                    | Resources that should only be accessed from within a virtual network or through private endpoints. |
 
-> [!NOTE]  
+> [!NOTE]
 > About the exception checkmark `Allow Azure services on the trusted services list to access this search service`: <br/>
 > This setting `allows trusted Azure services to bypass the network rules` and access your resource directly.
 > These include services `like Azure Backup, Azure Site Recovery`, and others that are part of the trusted services list.
@@ -114,22 +114,22 @@ graph TD
         PE_VM["Private Endpoint VM"]
         PE_SearchService["Private Endpoint AI Search"]
         PE_OpenAI["Private Endpoint OpenAI"]
-        
+
         VM --> NIC_VM
         NIC_VM --> NSG
         NIC_VM --> Subnet
         NIC_VM --> PE_VM
-        
+
         SearchService --> NIC_SearchService
         NIC_SearchService --> NSG
         NIC_SearchService --> Subnet
         NIC_SearchService --> PE_SearchService
-        
+
         OpenAI --> NIC_OpenAI
         NIC_OpenAI --> NSG
         NIC_OpenAI --> Subnet
         NIC_OpenAI --> PE_OpenAI
-        
+
         NSG --> Subnet
     end
 ```
@@ -139,9 +139,9 @@ graph TD
 3. **Service Endpoints**: Add service endpoints for Azure OpenAI and Azure AI Search.
 
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/3dcec8bc-8ee1-48ec-b262-d49c18e04436">
-    
+
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/15332c2d-6df7-4663-88ea-414b64eacf47">
-  
+
     <img width="951" alt="image" src="https://github.com/user-attachments/assets/1c5052b7-10ea-4d92-b54c-42d9777e9f5a">
 
 ### Configure Private Endpoints for Azure AI Search
@@ -152,7 +152,7 @@ graph TD
    - **Name**: Provide a name for the private endpoint.
    - **Virtual Network**: Select the same virtual network and subnet as used for Azure OpenAI.
    - **Integration**: Integrate with your DNS for name resolution.
-4. **Approve Connection**: Once the private endpoint is created, approve the connection. 
+4. **Approve Connection**: Once the private endpoint is created, approve the connection.
 
   | **Network Configuration**            | **Use Case**                                                                                                                                   | **Considerations**                                                                                                                                                                                                 |
   |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -167,7 +167,7 @@ graph TD
 - Create the shared private link or the `private endpoint` as needed:
 
    > Shared private access:
-   
+
     <img width="550" alt="image" src="https://github.com/user-attachments/assets/0c1e7ca2-344d-4140-bf37-8dc1d2afa669">
 
     > Private Endpoint:
@@ -201,8 +201,8 @@ graph TD
 3. **Configure Security Rules**: Add inbound and outbound security rules to allow traffic only from your specific network.
 
 <img width="550" alt="image" src="https://github.com/user-attachments/assets/669186f7-329e-4423-8359-27434b358ed2">
-   
-### Create index/Upload Documents 
+
+### Create index/Upload Documents
 
 > Since now we are in a private network, Azure AI Search only admits requests from clients in a virtual network instead of over a public internet. So we need to create a VM, and set that VM in a VNET. Click [here for a more detailed guide on how to Create a private endpoint for a secure connection to Azure AI Search](https://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#use-the-azure-portal-to-access-a-private-search-service)
 
@@ -227,7 +227,7 @@ graph TD
 - Create Index: Set up an index to store your documents.
 
    <img width="550" alt="image" src="https://github.com/user-attachments/assets/7304b542-7bc9-4c59-a2a3-ae81d6be113a">
-   
+
    <img width="550" alt="image" src="https://github.com/user-attachments/assets/b6e6ebaa-c371-4a56-bffb-4dc95fc272e5">
 
    <img width="550" alt="image" src="https://github.com/user-attachments/assets/8b255ca7-a98d-42be-b854-94b16a41b922">
@@ -272,7 +272,7 @@ graph TD
             3. **Configure Data Source**: Follow the steps to configure the data source. This may involve selecting the type of data source and providing the necessary connection details.<br/>
             4. **Review and Finish**: Review the configuration and finish the setup to add the data source.<br/>
             5. **Index Data**: The data from the configured data source will be indexed and available for search and retrieval.<br/>
-            
+
                <img width="550" alt="image" src="https://github.com/user-attachments/assets/ecb19e4e-c79e-4ec6-9a1a-cc98cc95ddb2">
 
        - **Completions**: Test the model with completion tasks.

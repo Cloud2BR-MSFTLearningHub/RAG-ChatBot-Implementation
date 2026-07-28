@@ -1,0 +1,1 @@
+--8<-- "3_PricingDemos/2_AOAI-AIFoundry.md"

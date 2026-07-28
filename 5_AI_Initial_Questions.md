@@ -1,4 +1,4 @@
-# Initial AI Questions - Overview 
+# Initial AI Questions - Overview
 
 Costa Rica
 

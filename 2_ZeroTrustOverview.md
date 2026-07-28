@@ -11,14 +11,14 @@ Last updated: 2026-04-06
 
 > For Azure AI Search and OpenAI in a Retrieval-Augmented Generation (RAG) setup, find below an example of how these components are interconnected within a secure Azure environment.
 
-<details>
+<details markdown="1">
 <summary><b> References </b> (Click to expand)</summary>
-   
+
 - [RAG Microsoft Enterprise RAG Solution Accelerator (GPT-RAG) - github repo](https://github.com/Azure/GPT-RAG)
 - [Overview – Apply Zero Trust principles to Azure IaaS](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview)
 - [Zero Trust defined](https://www.microsoft.com/en-us/security/business/zero-trust?msockid=38ec3806873362243e122ce086486339)
 - [Zero Trust Essentials eBook](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/zero-trust-essentials-ebook.pdf)
-  
+
 </details>
 
 ## Overview
@@ -48,7 +48,7 @@ From [Microsoft Security](https://www.microsoft.com/en-us/security/business/zero
 
 ## Workflow in Zero Trust Architecture
 
-> Network Interface & Network Security Groups: 
+> Network Interface & Network Security Groups:
 
 <div align="center">
   <img width="800" alt="image" src="https://github.com/user-attachments/assets/aa342b5d-76ed-4b1e-8ab6-18a1dbc19701" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
@@ -60,7 +60,7 @@ From [Microsoft Security](https://www.microsoft.com/en-us/security/business/zero
   <img width="800" alt="image" src="https://github.com/user-attachments/assets/16f0ec13-83b6-4e12-8719-5282d7291758" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
 </div>
 
-> Microsoft Enterprise RAG Solution Accelerator: 
+> Microsoft Enterprise RAG Solution Accelerator:
 
 1. **User Interaction**: The user initiates a request from their device.
 2. **Azure Front Door and WAF**: The request is routed through Azure Front Door and Web Application Firewall (WAF) for initial security checks.

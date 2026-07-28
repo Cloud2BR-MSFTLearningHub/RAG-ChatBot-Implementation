@@ -1,8 +1,8 @@
-# Demonstration: Azure Open AI \& AI Foundry Pricing 
+# Demonstration: Azure Open AI \& AI Foundry Pricing
 
 Costa Rica
 
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com) 
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
@@ -10,10 +10,10 @@ Last updated: 2026-04-06
 
 ----------
 
-> [!NOTE]
-> Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
+!!! note
+    Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
 
-<details>
+<details markdown="1">
 <summary><b>List of References </b> (Click to expand)</summary>
 
 - [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
@@ -22,7 +22,7 @@ Last updated: 2026-04-06
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Table of Content </b> (Click to expand)</summary>
 
 - [Pricing Models](#pricing-models)
@@ -32,12 +32,12 @@ Last updated: 2026-04-06
 
 </details>
 
-## Pricing Models 
+## Pricing Models
 
-Azure OpenAI Service supports different pricing models, including: 
+Azure OpenAI Service supports different pricing models, including:
 
-- Standard (On-Demand): Pay only for the tokens processed. 
-- Provisioned Throughput Units (PTUs): Ensure consistent throughput and minimal latency variance for scalable solutions. Click here to read more about [What is provisioned throughput?](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/provisioned-throughput?tabs=global-ptum) 
+- Standard (On-Demand): Pay only for the tokens processed.
+- Provisioned Throughput Units (PTUs): Ensure consistent throughput and minimal latency variance for scalable solutions. Click here to read more about [What is provisioned throughput?](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/provisioned-throughput?tabs=global-ptum)
 - Batch API: For global deployments and some regions, providing completions within 24 hours at a 50% discount on Global Standard Pricing. Click to read more about [Getting started with Azure OpenAI batch deployments](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/batch?tabs=global-batch%2Cstandard-input%2Cpython-secure&pivots=ai-foundry-portal)
 
 | Billing Model | Description | Cost Calculation | Use Cases |
@@ -56,10 +56,10 @@ Azure OpenAI Service supports different pricing models, including:
 
 > The Pay-As-You-Go model `charges solely based on the cumulative number of tokens processed`. To accurately estimate your costs, first determine the total tokens processed per call by adding the tokens from both the prompt and the response. Then, scale that figure by your total number of calls over your desired period.
 
-> [!NOTE]
->
-> - Adjust the token counts and cost rate according to the specific model series or deployment region, as pricing may vary. <br/>
-> - For the most up-to-date cost details and additional pricing factors, please review the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) and [Azure OpenAI Service pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/?msockid=38ec3806873362243e122ce086486339#pricing) page.
+!!! note
+
+    - Adjust the token counts and cost rate according to the specific model series or deployment region, as pricing may vary. <br/>
+    - For the most up-to-date cost details and additional pricing factors, please review the [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) and [Azure OpenAI Service pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/?msockid=38ec3806873362243e122ce086486339#pricing) page.
 
 > **Calculation Formula:**
 
@@ -81,7 +81,7 @@ $$
 
 > Find below some examples:
 
-<details>
+<details markdown="1">
 <summary><strong>Definitions</strong></summary>
 
 - **Use Case**: The scenario being measured (e.g., Small Chatbot Interaction, Enterprise QA Assistant, Bulk Content Generation).
@@ -111,7 +111,7 @@ $$
 > Provisioned Throughput Units (PTUs) <br/>
 > Tokens Per Minute (TPM)
 
-E.g 
+E.g
 
 | **PTUs** | **Calls per Minute** | **Tokens in Prompt** | **Tokens in Response** | **Tokens per Minute (TPM)** |
 |----------|----------------------|----------------------|------------------------|-----------------------------|

@@ -1,4 +1,4 @@
-# RAG ChatBot Implementation - Overview 
+# RAG ChatBot Implementation - Overview
 
 > Retrieval-Augmented Generation (RAG)
 
@@ -11,11 +11,11 @@ Last updated: 2026-04-06
 
 ----------
 
-<details>
+<details markdown="1">
 <summary><b>List of References</b> (Click to expand)</summary>
 
 - [Azure status history](https://azure.status.microsoft/en-us/status/history/)
-- [Claude Status](https://status.claude.com/)    
+- [Claude Status](https://status.claude.com/)
 - [Azure Updates](https://azure.microsoft.com/en-us/updates/)
 - [Connect with partners](https://marketplace.microsoft.com/en-us/marketplace/partner-dir/)
 - [Microsoft Docs - Azure resources docs](https://github.com/MicrosoftDocs) - backend specifications
@@ -41,7 +41,7 @@ Last updated: 2026-04-06
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Table of Content</b> (Click to expand)</summary>
 
 - [Where to start?](#where-to-start)
@@ -80,9 +80,9 @@ flowchart LR
     D:::step
 ```
 
-<details>
+<details markdown="1">
 <summary><b> More details about it here </b> (Click to expand)</summary>
-  
+
 > - We all `start with scripting`, no matter the language, it’s the first step. `Simple/complex instructions, written line by line`, to get something done
 > - Then comes `machine learning`. At this stage, we’re not reinventing the math, we’re `leveraging powerful packages built on deep statistical and mathematical foundations.` These tools let us `automate smarter processes, like reviewing claims with predictive analytics. You’re not just coding anymore; you’re building systems that learn and adapt.`
 > - `LLMs`. This is what most people mean when they say `AI.` Think of `yourself as the architect, and the LLM as your strategic engine. You can plug into it via an API, a key, or through integrated services. It’s not just about automation, it’s about reasoning, understanding, and generating human-like responses.`
@@ -90,29 +90,31 @@ flowchart LR
 
 </details>
 
-> [!NOTE]
-> A landing zone is a general `cloud framework that sets up the core structure for all workloads`. Each use case (like an app, data pipeline, or API) then builds on top of this framework, using the `same environments (Dev → Test → UAT → Prod) and CI/CD pipelines to move code safely into production.` It’s general by design, but `applied per use case.`
+!!! note
+    A landing zone is a general `cloud framework that sets up the core structure for all workloads`. Each use case (like an app, data pipeline, or API) then builds on top of this framework, using the `same environments (Dev → Test → UAT → Prod) and CI/CD pipelines to move code safely into production.` It’s general by design, but `applied per use case.`
 
-> [!TIP]
-> Start simple (LLM + AI Search); add embeddings/vector search when keyword recall fails; add hybrid, reranker, and orchestration as scale, accuracy, and workflow complexity grow.
-> <details> <summary><b> Quick explanation about trends: </b> (Click to expand)</summary>
->
-> - LLM + AI Search is enough ➝ `When Knowledge Base is small and queries predictable`; use metadata/keyword filters to retrieve exact passages and pass them to the LLM for generation.
-> - Add embeddings + [vector search](https://learn.microsoft.com/en-us/azure/search/vector-search-ranking) ➝ `When queries are open‑ended or paraphrased`; embed query and docs, run ANN similarity to surface semantically relevant passages.
-> - Use hybrid (sparse + dense) search ➝ `When you need precision and semantic recall`; apply metadata/keyword filters first, then run vector similarity on the filtered set and combine scores.
-> - Apply metadata‑first retrieval ➝ `When tenant/product/date matter`; filter by metadata to narrow scope, then run vector or keyword search inside that subset.
-> - Chunk long documents ➝`When docs exceed model context`; split into passages, embed chunks, and retrieve at passage level to build context for the LLM.
-> - Add a reranker ➝ `When top‑k contains noise`; rerank retrieved passages with a lightweight model or LLM to pick the best context before generation.
-> - Use caching for hot queries ➝ `When queries repeat`; cache top‑k results or final answers (Redis) to cut embedding and LLM costs and reduce latency.
-> - Embed on‑demand / incremental re‑embed ➝ `When corpus is large or changing`; embed only new/high‑value docs or re‑embed incrementally to control cost.
-> - Add selective embedding ➝ `When cost matters`; embed only high‑value document types (SLA docs, policies, manuals) and use keyword search for the rest.
-> - Add reranking + citation extraction ➝ `When answers must be precise or auditable`; rerank and extract exact snippets with source metadata for the LLM to cite.
-> - Introduce orchestration / Semantic Kernel / Agent framework / etc ➝ `When workflows are multi‑step or stateful`; orchestrate retrieval, tool calls, planning, memory, and multi‑turn logic around the LLM.
-> - Add monitoring, governance, and security ➝ `When production or sensitive data`(ALWAYS only OPTIONAL for DEMO with DUMMY data); log relevance/latency, enforce access controls, encrypt vectors, and audit usage.
-> - Scale vector infra (tune index) ➝ `When throughput/latency SLAs matter`; tune [ANN](https://learn.microsoft.com/en-us/azure/search/vector-search-ranking#about-ann) (Approximate Nearest Neighbor) index parameters, sharding, and replica strategy in your vector store.
-> - Use human‑in‑the‑loop ➝ `When high‑risk or domain‑sensitive answers`; Show shortlisted snippets for human review before final LLM response.
->
-> </details>
+!!! tip
+    Start simple (LLM + AI Search); add embeddings/vector search when keyword recall fails; add hybrid, reranker, and orchestration as scale, accuracy, and workflow complexity grow.
+
+<details markdown="1">
+<summary><b> Quick explanation about trends: </b> (Click to expand)</summary>
+
+- LLM + AI Search is enough ➝ `When Knowledge Base is small and queries predictable`; use metadata/keyword filters to retrieve exact passages and pass them to the LLM for generation.
+- Add embeddings + [vector search](https://learn.microsoft.com/en-us/azure/search/vector-search-ranking) ➝ `When queries are open‑ended or paraphrased`; embed query and docs, run ANN similarity to surface semantically relevant passages.
+- Use hybrid (sparse + dense) search ➝ `When you need precision and semantic recall`; apply metadata/keyword filters first, then run vector similarity on the filtered set and combine scores.
+- Apply metadata‑first retrieval ➝ `When tenant/product/date matter`; filter by metadata to narrow scope, then run vector or keyword search inside that subset.
+- Chunk long documents ➝`When docs exceed model context`; split into passages, embed chunks, and retrieve at passage level to build context for the LLM.
+- Add a reranker ➝ `When top‑k contains noise`; rerank retrieved passages with a lightweight model or LLM to pick the best context before generation.
+- Use caching for hot queries ➝ `When queries repeat`; cache top‑k results or final answers (Redis) to cut embedding and LLM costs and reduce latency.
+- Embed on‑demand / incremental re‑embed ➝ `When corpus is large or changing`; embed only new/high‑value docs or re‑embed incrementally to control cost.
+- Add selective embedding ➝ `When cost matters`; embed only high‑value document types (SLA docs, policies, manuals) and use keyword search for the rest.
+- Add reranking + citation extraction ➝ `When answers must be precise or auditable`; rerank retrieved passages with source metadata for the LLM to cite.
+- Introduce orchestration / Semantic Kernel / Agent framework / etc ➝ `When workflows are multi‑step or stateful`; orchestrate retrieval, tool calls, planning, memory, and multi‑turn logic around the LLM.
+- Add monitoring, governance, and security ➝ `When production or sensitive data` (always optional for demos with dummy data); log relevance/latency, enforce access controls, encrypt vectors, and audit usage.
+- Scale vector infrastructure (tune index) ➝ `When throughput/latency SLAs matter`; tune [ANN](https://learn.microsoft.com/en-us/azure/search/vector-search-ranking#about-ann) (Approximate Nearest Neighbor) index parameters, sharding, and replica strategy in your vector store.
+- Use human-in-the-loop ➝ `When high-risk or domain-sensitive answers`; show shortlisted snippets for human review before final LLM response.
+
+</details>
 
 > In the context of developing an E2E solution or application. Each stage builds confidence (technical, functional, and strategical), until we ready to scale and support the solution in the real world. Think of them as milestones in the journey from idea to production:
 
@@ -122,9 +124,9 @@ flowchart LR
 > - PoV: Aligns with `business goals and KPIs` → `Stakeholder engagement`
 > - MVP: Usable `product with core features` → `Set of features that delivers value and can be deployed` → Dev, Test, UAT (User Acceptance Testing), Prod
 
-<details>
+<details markdown="1">
 <summary><b>Detailed phases</b> (Click to expand)</summary>
-  
+
 | Phase | Goal | What Happens | Focus | Audience | Example |
 |-------|------|--------------|-------|----------|---------|
 | **PoC (Proof of Concept)** | Validate technical feasibility | Build a minimal version to prove that the core idea or technology can work | Infrastructure setup, basic UI, simple workflows, mock data | Internal tech teams, architects | Can we integrate this new AI model into our system? |
@@ -144,10 +146,10 @@ flowchart LR
 
 </details>
 
-> [!NOTE]
-> How to query from `Sharepoint Library`: [GPT-RAG Data Ingestion](https://github.com/Azure/gpt-rag-ingestion/tree/main) 
+!!! note
+    How to query from `Sharepoint Library`: [GPT-RAG Data Ingestion](https://github.com/Azure/gpt-rag-ingestion/tree/main)
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > - Access & Authentication: Integration uses a `service principal accoun`t registered in Azure Entra ID to authenticate and access the SharePoint document library via Microsoft Graph API. This avoids using personal accounts for programmatic access.
@@ -161,7 +163,7 @@ flowchart LR
 >   - Handles API interaction: [sharePoint.py](https://github.com/Azure/gpt-rag-ingestion/blob/main/tools/sharepoint.py)
 >   - Documents are chunked using a `common logic module, not specific to SharePoint`, to prepare data for embedding and indexing: [document_chunking.py](https://github.com/Azure/gpt-rag-ingestion/blob/main/chunking/document_chunking.py)
 > - Current Limitation: Only one `SharePoint library is supported at a time, but the code can be extended to support multiple libraries by creating additional indexes.`
-> - No Preview Connector: The integration `does not use the AI Foundry SharePoint preview connector; it relies on custom code developed before that connector was available.` 
+> - No Preview Connector: The integration `does not use the AI Foundry SharePoint preview connector; it relies on custom code developed before that connector was available.`
 > - Component Architecture: The `ingestion is handled by a function app, which takes files from SharePoint, converts them into vectors/embeddings, and stores them in the index for search`.
 
 ```
@@ -170,28 +172,28 @@ SharePoint Site → Metadata Streamer → Document Downloader → Chunker → Az
                      ↓
 
                 Deleted Items Checker → Purge Deleted Items
- ```
- 
+```
+
 </details>
 
-> [!NOTE]
-> How to query from `SQL on prem?`: <br/>
+!!! note
+    How to query from `SQL on prem?`: <br/>
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
-  
-> This process `involved converting natural language to SQL, where we integrated the SQL database with the Agentic framework. When a user submits a query from the frontend, the system extracts relevant schema details from the AI search index to generate a SQL query with a few example cases. The query is then executed on the SQL server to fetch the records, and the results are displayed in natural language on the UI using an LLM.`  Here more about how it works: [GPT-RAG Orchestrator](https://github.com/Azure/gpt-rag-orchestrator) 
+
+> This process `involved converting natural language to SQL, where we integrated the SQL database with the Agentic framework. When a user submits a query from the frontend, the system extracts relevant schema details from the AI search index to generate a SQL query with a few example cases. The query is then executed on the SQL server to fetch the records, and the results are displayed in natural language on the UI using an LLM.`  Here more about how it works: [GPT-RAG Orchestrator](https://github.com/Azure/gpt-rag-orchestrator)
 
 </details>
 
-> [!IMPORTANT]
-> Disclaimer: This repository contains example of a Retrieval-Augmented Generation (RAG) chat bot with a basic architecture (designed for scenarios without network isolation), and a standard Zero-Trust Architecture deployment. This is `just a guide`. It is not an official solution. For official guidance, support, or more detailed information. Please refer [RAG with Zero-Trust – Architecture Reference to Microsoft's official documentation](https://github.com/Azure/GPT-RAG) or contact Microsoft directly: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
+!!! warning "Important"
+    Disclaimer: This repository contains example of a Retrieval-Augmented Generation (RAG) chat bot with a basic architecture (designed for scenarios without network isolation), and a standard Zero-Trust Architecture deployment. This is `just a guide`. It is not an official solution. For official guidance, support, or more detailed information. Please refer [RAG with Zero-Trust – Architecture Reference to Microsoft's official documentation](https://github.com/Azure/GPT-RAG) or contact Microsoft directly: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
 
 | [Public Architecture](#basic-architecture)  | [Private Architecture](./1_PrivateArchitecture.md) |  [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG) |
-| --- | --- | --- | 
+| --- | --- | --- |
 |  <img width="800" alt="image" src="https://github.com/user-attachments/assets/5444e87c-32af-44e8-aa86-22fe4082c4f4" />    |   <img width="800" alt="image" src="https://github.com/user-attachments/assets/af835493-2d76-4216-8df6-3e258c9db949"> | <img width="800" alt="image" src="https://github.com/user-attachments/assets/67e7d9eb-f757-4fe9-85f4-d5bb08b9e55f" /> |
 
-<details>
+<details markdown="1">
 <summary><b>RAG + Fabric (Private Chatbot with your data + Dashboards)</b> (Click to expand)</summary>
 
 <img width="2621" height="1776" alt="ZeroTrustPrivateBot-RAG+Fabric drawio" src="https://github.com/user-attachments/assets/7537d6a7-faa8-492a-9e51-af3fccdbcccc" />
@@ -200,12 +202,12 @@ SharePoint Site → Metadata Streamer → Document Downloader → Chunker → Az
 
 > Here is a [quick overview about RAG](./0_RAG_Overview.md), explaining how it works, its applications, and how to implement it using Azure AI services.
 
-> [!TIP]
->
-> - `Batch processing involves uploading files to SharePoint`, where they can be `processed later`. <br/>
-> - `Real-time processing`, on the other hand, `would involve users uploading files directly within the app`, which could be stored in a `BLOB storage for immediate processing`.
+!!! tip
 
-## Where to start? 
+    - `Batch processing involves uploading files to SharePoint`, where they can be `processed later`. <br/>
+    - `Real-time processing`, on the other hand, `would involve users uploading files directly within the app`, which could be stored in a `BLOB storage for immediate processing`.
+
+## Where to start?
 
 - An `Azure subscription is required`. All other resources, including instructions for creating a Resource Group, are provided.
 - `Contributor role assigned or any custom role that allows`: access to manage all resources, and the ability to deploy resources within subscription.
@@ -227,26 +229,26 @@ SharePoint Site → Metadata Streamer → Document Downloader → Chunker → Az
 
 ### Important Considerations for Production Environment
 
-<details>
+<details markdown="1">
 <summary>Click to expand</summary>
 
 > Some considerations:
 
-<details>
+<details markdown="1">
   <summary>Public Network Site</summary>
-  
+
   > This example is based on a public network site and is intended for demonstration purposes only. It showcases how several Azure resources can work together to achieve the desired result.
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Private Network Configuration</summary>
 
  > For enhanced security, consider configuring your Azure resources to operate within a private network. This can be achieved using Azure Virtual Network (VNet) to isolate your resources and control inbound and outbound traffic. Implementing private endpoints for services like Azure Blob Storage and Azure Functions can further secure your data by restricting access to your VNet.
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Security</summary>
 
   > Ensure that you implement appropriate security measures when deploying this solution in a production environment. This includes: <br/>
@@ -257,7 +259,7 @@ SharePoint Site → Metadata Streamer → Document Downloader → Chunker → Az
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Scalability</summary>
 
   > While this example provides a basic setup, you may need to scale the resources based on your specific requirements. Azure services offer various scaling options to handle increased workloads. Consider using: <br/>
@@ -267,22 +269,22 @@ SharePoint Site → Metadata Streamer → Document Downloader → Chunker → Az
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Cost Management</summary>
 
   > Monitor and manage the costs associated with your Azure resources. Use Azure Cost Management and Billing to track usage and optimize resource allocation.
 
 </details>
 
-<details>
+<details markdown="1">
   <summary>Compliance</summary>
 
   > Ensure that your deployment complies with relevant regulations and standards. Use Azure Policy to enforce compliance and governance policies across your resources.
 </details>
 
-<details>
+<details markdown="1">
   <summary>Disaster Recovery</summary>
-   
+
 > Implement a disaster recovery plan to ensure business continuity in case of failures. Use Azure Site Recovery and backup solutions to protect your data and applications.
 
 </details>
@@ -293,8 +295,8 @@ SharePoint Site → Metadata Streamer → Document Downloader → Chunker → Az
 
 > Zero Trust AI architecture in Microsoft Azure is a `security framework designed to protect data, applications, and infrastructure by assuming that threats can come from both inside and outside the network`. This model operates on the principle of "never trust, always verify", meaning `every access request is thoroughly authenticated and authorized based on all available data points, regardless of its origin. The architecture integrates multiple layers of security, including strong identity verification, device compliance checks, and least privilege access, ensuring that only authorized users and devices can access sensitive resources`. By continuously monitoring and validating each request, Zero Trust AI architecture helps organizations minimize risks and enhance their overall security posture.
 
-> [!IMPORTANT]
-> Click [here for a more quick guidance about Zero Trust](./2_ZeroTrustOverview.md). For a `solution accelerator with a zero-trust architecture` please refer to [Microsoft's official GPT-RAG Solution Accelerator](https://github.com/Azure/GPT-RAG) or contact Microsoft directly: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
+!!! warning "Important"
+    Click [here for a more quick guidance about Zero Trust](./2_ZeroTrustOverview.md). For a `solution accelerator with a zero-trust architecture` please refer to [Microsoft's official GPT-RAG Solution Accelerator](https://github.com/Azure/GPT-RAG) or contact Microsoft directly: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
 
 <div align="center">
   <img width="800" alt="image" src="https://github.com/user-attachments/assets/1b16f34b-842c-4610-a52a-d0d85e684dac" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
@@ -307,19 +309,19 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 | **Application Components**| - [Data Ingestion](https://github.com/Azure/gpt-rag-ingestion): Optimizes data chunking and indexing for retrieval. Integrates with SharePoint for document processing. Click [here for more information about the Sharepoint setup](https://github.com/Azure/GPT-RAG/blob/main/docs/INGESTION_SHAREPOINT_SETUP.md). <br> - Orchestrator: Manages retrieval and response generation. [Functional (Semantic Kernel)](https://github.com/Azure/gpt-rag-orchestrator) or [Agentic (AutoGen)](https://github.com/Azure/gpt-rag-agentic). <br> - App Front-End: User interface with [React Front-End](https://github.com/Azure/gpt-rag-frontend) or [Chainlit Front-End](https://github.com/Azure/gpt-rag-ui), following [Backend for Front-End pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) <br/> - [RAG Security Hub](https://github.com/Azure/gpt-rag-securityhub/tree/main): Secures the RAG stack with Azure AD, Key Vault, and secure deployment practices. Centralizes environment config and vulnerability management.|
 | **Batch Processing**      | Handles large datasets in parallel. Ideal for data analysis and content generation. |
 
-> [!NOTE]
-> To deploy this solution accelerator, please make sure that you have installed all the requirements mentioned in the [prerequisites section](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#getting-started) before proceeding. Below, you will find visual guidance that complements the [Zero Trust Architecture Deployment](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#zero-trust-architecture-deployment) from the [Microsoft's official GPT-RAG Solution Accelerator](https://github.com/Azure/GPT-RAG).
+!!! note
+    To deploy this solution accelerator, please make sure that you have installed all the requirements mentioned in the [prerequisites section](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#getting-started) before proceeding. Below, you will find visual guidance that complements the [Zero Trust Architecture Deployment](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#zero-trust-architecture-deployment) from the [Microsoft's official GPT-RAG Solution Accelerator](https://github.com/Azure/GPT-RAG).
 
-### Step 0.1: Install azd 
+### Step 0.1: Install azd
 
-> The Azure Developer CLI (azd) is an `open-source tool` designed to streamline the end-to-end developer workflow on Azure. It provides `high-level commands` that simplify common developer tasks such as `project initialization, infrastructure provisioning, code deployment, and monitoring`. 
+> The Azure Developer CLI (azd) is an `open-source tool` designed to streamline the end-to-end developer workflow on Azure. It provides `high-level commands` that simplify common developer tasks such as `project initialization, infrastructure provisioning, code deployment, and monitoring`.
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > More detailed technical information:
-  
-<details>
+
+<details markdown="1">
 <summary><strong>Key Features</strong></summary>
 
 - High-level commands for common developer tasks
@@ -334,7 +336,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Commands Overview</strong></summary>
 
 - **Initialization (`azd init`)**: Initialize a new project; sets up the project structure, including necessary configuration files and directories.
@@ -344,7 +346,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Comparison with Other Tools</strong></summary>
 
 - **Azure CLI**: Provides granular control over individual Azure resources; ideal for detailed management of Azure resources, offering extensive command options for precise control.
@@ -353,7 +355,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Templates</strong></summary>
 
 - **Project Structure**: azd templates follow a standardized structure, making it easier for developers to understand and navigate the project.
@@ -363,7 +365,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Customization</strong></summary>
 
 - **Use Terraform with azd**: Allows developers to use Terraform for infrastructure management, providing a consistent approach to resource provisioning; integrate Terraform scripts within azd workflows to manage infrastructure as code, allowing for consistent and repeatable deployments across different environments.
@@ -381,7 +383,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 > PowerShell 7 `complements Azure Developer CLI (azd) by providing robust automation capabilities that enhance the development and deployment workflows on Azure`. With PowerShell 7, you can `automate tasks such as provisioning resources, deploying applications, and managing configurations, which are integral to azd's operations.` For instance, you can use PowerShell scripts to automate the azd provision command, ensuring consistent infrastructure setup across different environments. PowerShell 7's ability to execute commands remotely aligns with azd's remote environment support, allowing seamless management of Azure resources from any location. By integrating PowerShell 7 scripts into azd workflows, developers can streamline their processes, improve efficiency, and maintain greater control over their Azure deployments.
 
-<details>
+<details markdown="1">
 <summary><b> Visual reference here </b> (Click to expand)</summary>
 
 <https://github.com/user-attachments/assets/9bb475e4-7fef-46d9-9147-a28e806b4e1c>
@@ -390,7 +392,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 ### Step 1: Download the repository
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > Standard orchestrator
@@ -409,18 +411,18 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 </details>
 
-> [!IMPORTANT]
-> Update the information in the `GPT-RAG_SolutionAccelerator/infra/main.parameters.json` file, and make sure to save your changes before proceeding with the infrastructure deployment.
+!!! warning "Important"
+    Update the information in the `GPT-RAG_SolutionAccelerator/infra/main.parameters.json` file, and make sure to save your changes before proceeding with the infrastructure deployment.
 
 ### Step 2: Enable network isolation
 
 > Azure network isolation is a security strategy that segments a network into distinct subnets or segments, each functioning as its own small network. This approach enhances security by preventing unauthorized access and data leakage. In Azure, network isolation can be achieved using Virtual Networks (VNets), Network Security Groups (NSGs), and Private Link, allowing precise control over inbound and outbound traffic.
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
   ```
-  azd env set AZURE_NETWORK_ISOLATION true  
+  azd env set AZURE_NETWORK_ISOLATION true
   ```
 
 <https://github.com/user-attachments/assets/4f493506-970d-4b1d-aee2-1b0972a365d7>
@@ -429,13 +431,13 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 ### Step 3: Login to Azure
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > Make sure you log in to both:
 
-1. Azure Developer CLI: 
-      
+1. Azure Developer CLI:
+
       ```
       azd auth login
       ```
@@ -454,7 +456,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 > `azd provision` command in Azure Developer CLI (azd) automates the deployment of necessary Azure resources for an application. It uses infrastructure-as-code templates to set up Azure services, ensuring consistent and repeatable deployments across different environments.
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
   ```
@@ -479,7 +481,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 > AI/Data Science VM
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 1. To proceed with the deployment, use the Virtual Machine connected via Bastion (set up in step 4).
@@ -496,7 +498,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 ### Step 6: Install PowerShell 7 in the vm
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > After logging into Windows, [install PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#installing-the-msi-package), as all other necessary components are already set up on the VM.
@@ -507,13 +509,13 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 ### Step 7: Update azd on the VM
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > Launch the `Command Prompt` and enter the following command to update azd to its latest version:
 
   ```
-  choco upgrade azd  
+  choco upgrade azd
   ```
 
   <https://github.com/user-attachments/assets/777cdd6e-fa8f-49c2-9398-f94ac45be711>
@@ -522,7 +524,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
 ### Step 8: Application deployment
 
-<details>
+<details markdown="1">
 <summary><b> Details </b> (Click to expand)</summary>
 
 > Please review these configurations: <br/>
@@ -534,14 +536,14 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
   <div align="center">
     <img src="https://github.com/user-attachments/assets/db726be0-49a7-4fe7-b042-b14aaa82983f" alt="Centered Image" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
   </div>
-  
+
   <https://github.com/user-attachments/assets/daf3df9d-8c77-42b8-9b84-6728ef4a3332>
 
 1. Create a new folder, for example `deploy` as mentioned in the [official guide](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#zero-trust-architecture-deployment)
 2. Once you've created the folder, go ahead and jump into it.
 
       ```
-      mkdir deploy  
+      mkdir deploy
       cd deploy
       ```
 
@@ -550,7 +552,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 > When executing the `azd init for the app` and `azd env refresh` commands, ensure that the `environment name, subscription, and region are consistent` with those used during the `initial infrastructure provisioning`.
 
 3. Sets up a new project using the Azure GPT-RAG template: `azd init -t azure/gpt-rag`
-  
+
     <https://github.com/user-attachments/assets/094a0830-2a33-42ae-821c-b8ae199fd772>
 
 4. Logs you into Azure Developer CLI: `azd auth login`.
@@ -567,25 +569,25 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
       ```powershell
         PS C:\Users\vm-user\Downloads\RAG-ChatBot-Implementation\GPT-RAG_SolutionAccelerator\deploy> azd env refresh
-        
+
         Refreshing environment gptbrowntest (azd env refresh)
-        
+
         ? Select an Azure Subscription to use:  1. ME-timnab-1 (8237827342e0-9348)
           (✓) Done: Retrieving Azure deployment (gptbrowntest-1745337566)
           (✓) Done: Updated 63 environment variables
-        
+
         Populated environment from Azure infrastructure deployment: gptbrowntest-1747566
-        
+
         SUCCESS: Environment refresh completed
         View environment variables at C:\Users\vm-user\Downloads\RAG-ChatBot-Implementation\GPT-RAG_SolutionAccelerator\deploy\.azure\gptbrowntest\.env
       ```
-    
+
       <https://github.com/user-attachments/assets/4c3337e0-514c-4ad5-8324-e911d9542496>
 
 8. Builds and packages your application code into deployable artifacts without deploying them to Azure: `azd package`
 
-    > For example: 
-  
+    > For example:
+
     <div align="center">
       <img src="https://github.com/user-attachments/assets/bdbe03ab-080c-4d72-a449-8e7a60c35390" alt="Centered Image" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
     </div>
@@ -594,7 +596,7 @@ From [Standard Zero-Trust Architecture](https://github.com/Azure/GPT-RAG/blob/ma
 
     <https://github.com/user-attachments/assets/aa248d9b-b1eb-42e3-9e6c-5e41bfdf5484>
 
-> **If you find an error with `azd deploy`:** 
+> **If you find an error with `azd deploy`:**
 
 ```
 ERROR: getting target resource: getting default resource groups for environment:
@@ -607,18 +609,18 @@ gpt-rag-resource-group: resource not found: 0 resource groups with prefix or suf
 
 > Please follow these steps to troubleshoot: <br/>
 >
-> - Review the `infra/main.parameters.json` file for missing or incorrect values.  
-> - Run `az account show` to confirm you're logged into the correct Azure subscription.  
-> - Run `azd env list` to check available environments.  
-> - Run `azd env get-values` and make sure the values match those in `main.parameters.json`.  
-> - Optionally, run `azd deploy --verbose` for more detailed error output.  
-> For example: <br/>  
+> - Review the `infra/main.parameters.json` file for missing or incorrect values.
+> - Run `az account show` to confirm you're logged into the correct Azure subscription.
+> - Run `azd env list` to check available environments.
+> - Run `azd env get-values` and make sure the values match those in `main.parameters.json`.
+> - Optionally, run `azd deploy --verbose` for more detailed error output.
+> For example: <br/>
 > If `main.parameters.json` contains `"location": "westus2"`, make sure your environment has `AZURE_LOCATION=westus2`.
 
 </details>
 
-> [!NOTE]
-> A `golden dataset` for RAG is your trusted `curated set of documents or files that the system retrieves from when answering questions`. It’s a clean, accurate, and `representative subset of all possible data free of noise and errors`, so the model always pulls reliable context. Is a `subset of files, for example, and known Q&A pairs chosen from the larger data source.` These are the “benchmark” `questions where the correct answers are already known`, so they can be `used later to measure system accuracy and performance`. Other `expert users are free to ask additional questions during testing, but those will still pull context from the same curated files in the golden dataset (subset datasource)`. In short, it’s the trusted evaluation set for your proof of concept for example.
+!!! note
+    A `golden dataset` for RAG is your trusted `curated set of documents or files that the system retrieves from when answering questions`. It’s a clean, accurate, and `representative subset of all possible data free of noise and errors`, so the model always pulls reliable context. Is a `subset of files, for example, and known Q&A pairs chosen from the larger data source.` These are the “benchmark” `questions where the correct answers are already known`, so they can be `used later to measure system accuracy and performance`. Other `expert users are free to ask additional questions during testing, but those will still pull context from the same curated files in the golden dataset (subset datasource)`. In short, it’s the trusted evaluation set for your proof of concept for example.
 
 <img width="411" height="243" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/40682ec2-77e4-4413-88e5-d343f036f084" />
 

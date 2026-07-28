@@ -1,4 +1,4 @@
-# Retrieval-Augmented Generation (RAG) pattern - Overview 
+# Retrieval-Augmented Generation (RAG) pattern - Overview
 
 Costa Rica
 
@@ -9,9 +9,9 @@ Last updated: 2026-04-06
 
 ----------
 
-<details>
+<details markdown="1">
 <summary><b>List of References </b> (Click to expand)</summary>
-   
+
 - [What's Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search)
 - [Indexer overview - Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-indexer-overview)
 - [Field mappings and transformations using Azure AI Search indexers](https://learn.microsoft.com/en-us/azure/search/search-indexer-field-mappings)
@@ -36,7 +36,7 @@ Last updated: 2026-04-06
 
 </details>
 
-## Overview 
+## Overview
 
 | **Step**       | **Definition** | **Implementation with Azure** |
 |----------------|----------------|-------------------------------|
@@ -93,10 +93,10 @@ graph LR
     O --> Q[Implementation]
     K --> R[Conversational AI]
     R --> S[Definition]
-    R --> T[Implementation] 
+    R --> T[Implementation]
 ```
 
-<details>
+<details markdown="1">
 <summary><b>Question Answering</b></summary>
 
 > Providing accurate answers by retrieving relevant documents and generating responses based on them.
@@ -112,7 +112,7 @@ graph LR
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Document Summarization</b></summary>
 
 > Summarizing documents by retrieving key sections and generating concise summaries.
@@ -128,7 +128,7 @@ graph LR
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Conversational AI</b></summary>
 
 > Enhancing chatbot responses with up-to-date information from external sources.

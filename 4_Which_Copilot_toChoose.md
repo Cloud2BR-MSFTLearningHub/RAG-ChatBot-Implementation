@@ -11,11 +11,11 @@ Last updated: 2026-07-01
 
 ----------
 
-<details>
+<details markdown="1">
 <summary><b>List of References</b> (Click to expand)</summary>
 
 - [Microsoft Copilot Studio pricing](https://azure.microsoft.com/en-us/pricing/details/copilot-studio/?msockid=38ec3806873362243e122ce086486339)
-- [Get access to Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing#get-access-to-copilot-studio) - pricing overview 
+- [Get access to Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing#get-access-to-copilot-studio) - pricing overview
 - [AI strategy & decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) - Cloud Adoption Framework
 - [Which Copilot is right for your org](https://learn.microsoft.com/copilot/microsoft-365/which-copilot-for-your-organization) - Microsoft 365 Copilot
 - [Choose the right agent solution](https://learn.microsoft.com/microsoft-365/agents-sdk/choose-agent-solution) - Copilot Studio vs SDKs vs Azure AI
@@ -26,7 +26,7 @@ Last updated: 2026-07-01
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Table of Content</b> (Click to expand)</summary>
 
 - [Where to start?](#where-to-start)
@@ -40,60 +40,60 @@ Last updated: 2026-07-01
 
 </details>
 
-> [!IMPORTANT]
-> This is a practical `selection guide` synthesized from Microsoft Learn. For official canonical guidance (which evolves), always verify the linked docs: [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) and [Which Copilot is right for you](https://learn.microsoft.com/copilot/microsoft-365/which-copilot-for-your-organization)
+!!! warning "Important"
+    This is a practical `selection guide` synthesized from Microsoft Learn. For official canonical guidance (which evolves), always verify the linked docs: [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) and [Which Copilot is right for you](https://learn.microsoft.com/copilot/microsoft-365/which-copilot-for-your-organization)
 
 ## Where to start?
 
 1. **Clarify the goal**: productivity in M365 apps, a custom line-of-business agent, or a full-blown AI app/platform?
 2. **Match to service model**: **SaaS (Copilots)** for speed, **PaaS (Azure AI)** for control, **IaaS** for maximum customization. Read more about it here [Implementation considerations security, data, networking](#implementation-considerations-security-data-networking)
 
-## Quick decision tree 
+## Quick decision tree
 
-> [!TIP]
->
-> - If you need: → choose `Microsoft 365 Copilot`.
->   - `in‑app AI in Word/Excel/PowerPoint/Teams with enterprise protections` 
-> - If you need: → choose `Copilot Studio`.
->   - a `custom business agent` (low-code)
->   - `multi‑channel` (Teams/web)
->   - automation with `Power Platform`
->   - quick time‑to‑value 
->- If you need:  → choose `Azure AI Foundry (Azure AI Studio)/ Azure Open AI`.
->   - a `developer platform` for `RAG`
->   - multi‑agent patterns
->   - `model choice`
->   - evaluations
->   - deep integration
->- If you simply want: → `Microsoft Copilot (consumer)`
->   - a `web-grounded personal assistant` (not for sensitive work data)
->- If you need **AI assistance for coding/development**: → choose `GitHub Copilot`
->   - AI-powered code completions, chat, and PR reviews in your IDE
->   - Works in VS Code, JetBrains, Vim, and more
->   - Supports 30+ programming languages
->   - Requires a [GitHub Copilot subscription](https://github.com/features/copilot)
+!!! tip
+
+    - If you need: → choose `Microsoft 365 Copilot`.
+      - `in‑app AI in Word/Excel/PowerPoint/Teams with enterprise protections`
+    - If you need: → choose `Copilot Studio`.
+      - a `custom business agent` (low-code)
+      - `multi‑channel` (Teams/web)
+      - automation with `Power Platform`
+      - quick time‑to‑value
+    - If you need:  → choose `Azure AI Foundry (Azure AI Studio)/ Azure Open AI`.
+      - a `developer platform` for `RAG`
+      - multi‑agent patterns
+      - `model choice`
+      - evaluations
+      - deep integration
+    - If you simply want: → `Microsoft Copilot (consumer)`
+      - a `web-grounded personal assistant` (not for sensitive work data)
+    - If you need **AI assistance for coding/development**: → choose `GitHub Copilot`
+      - AI-powered code completions, chat, and PR reviews in your IDE
+      - Works in VS Code, JetBrains, Vim, and more
+      - Supports 30+ programming languages
+      - Requires a [GitHub Copilot subscription](https://github.com/features/copilot)
 
 <img width="846" height="1048" alt="ai-chat-decision-flow drawio" src="docs/ai-chat-decision-flow.png" />
 
-> [!TIP]
-> <img src="https://img.shields.io/badge/GitHub_Copilot-AI_Coding_Assistant-6e40c9?style=flat&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="22"/> &nbsp; **Need AI assistance for your code?** → Use **[GitHub Copilot](https://github.com/features/copilot)**!
->
-> GitHub Copilot is your AI-powered coding assistant, available directly in your IDE. It provides intelligent code completions, an in-editor chat, pull request summaries, and automated code reviews. If your goal is to **write, understand, or review code faster**, GitHub Copilot is the right choice.
->
-> | Feature | Details |
-> |---------|---------|
-> | **Where it works** | VS Code, JetBrains, Vim/Neovim, Visual Studio, Azure Data Studio, Xcode |
-> | **What it does** | Code completions, inline chat; slash commands: `/explain` (understand code), `/fix` (fix issues), `/test` (generate tests), PR summaries |
-> | **Languages** | 30+ including Python, JavaScript, TypeScript, Go, Java, C#, C++ |
-> | **Plans** | [Individual, Business, Enterprise](https://github.com/features/copilot#pricing), **free tier** (2,000 completions + 50 chats/month) available to all GitHub users |
-> | **Docs** | [GitHub Copilot Documentation](https://docs.github.com/copilot) |
+!!! tip
+    <img src="https://img.shields.io/badge/GitHub_Copilot-AI_Coding_Assistant-6e40c9?style=flat&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="22"/> &nbsp; **Need AI assistance for your code?** → Use **[GitHub Copilot](https://github.com/features/copilot)**!
 
-> [!NOTE]
-> `When users don't want/need to create their own interface or customized view`, they can `leverage the AI integrated into our products and services, depending on their needs.` For example, if they require visualizations capabilities with AI assistance, they can use the AI already built into `Fabric/Power Bi to generate reports, ask questions, etc.` Click here to read more about it [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) 
+    GitHub Copilot is your AI-powered coding assistant, available directly in your IDE. It provides intelligent code completions, an in-editor chat, pull request summaries, and automated code reviews. If your goal is to **write, understand, or review code faster**, GitHub Copilot is the right choice.
 
-Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
+    | Feature | Details |
+    |---------|---------|
+    | **Where it works** | VS Code, JetBrains, Vim/Neovim, Visual Studio, Azure Data Studio, Xcode |
+    | **What it does** | Code completions, inline chat; slash commands: `/explain` (understand code), `/fix` (fix issues), `/test` (generate tests), PR summaries |
+    | **Languages** | 30+ including Python, JavaScript, TypeScript, Go, Java, C#, C++ |
+    | **Plans** | [Individual, Business, Enterprise](https://github.com/features/copilot#pricing), **free tier** (2,000 completions + 50 chats/month) available to all GitHub users |
+    | **Docs** | [GitHub Copilot Documentation](https://docs.github.com/copilot) |
 
-<details>
+!!! note
+    `When users don't want/need to create their own interface or customized view`, they can `leverage the AI integrated into our products and services, depending on their needs.` For example, if they require visualizations capabilities with AI assistance, they can use the AI already built into `Fabric/Power Bi to generate reports, ask questions, etc.` Click here to read more about it [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy)
+
+Click here to [access the diagram](https://github.com/Cloud2BR-MSFTLearningHub/RAG-ChatBot-Implementation/blob/main/docs/ai-chat-decision-flow.drawio)
+
+<details markdown="1">
 <summary><b>More details</b> (Click to expand)</summary>
 
 | Scenario                                                                                                  | Choose                                                  | Why this fits                                                                    | Key notes                                                                                                                                                                                                                                          |
@@ -121,14 +121,14 @@ Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
 
 ## Implementation considerations (security, data, networking)
 
-> [!TIP]
->
-> - ![fastest](https://img.shields.io/badge/fastest-brightgreen?style=flat) Need fastest productivity impact across M365? `Choose SaaS (M365 Copilot/Copilot Studio).`
-> - ![control](https://img.shields.io/badge/customization-orange?style=flat) Building a domain copilot or RAG API with enterprise controls? `Choose PaaS (Azure AI Foundry).`
-> - ![flex](https://img.shields.io/badge/flexibility-blue?style=flat) Must run in tightly isolated environments or custom GPU stacks? `Choose IaaS.`
-> - ![control](https://img.shields.io/badge/customization-orange?style=flat) Unsure? Start on `PaaS for speed + control; move edge cases to IaaS if required.`
+!!! tip
 
-<details>
+    - ![fastest](https://img.shields.io/badge/fastest-brightgreen?style=flat) Need fastest productivity impact across M365? `Choose SaaS (M365 Copilot/Copilot Studio).`
+    - ![control](https://img.shields.io/badge/customization-orange?style=flat) Building a domain copilot or RAG API with enterprise controls? `Choose PaaS (Azure AI Foundry).`
+    - ![flex](https://img.shields.io/badge/flexibility-blue?style=flat) Must run in tightly isolated environments or custom GPU stacks? `Choose IaaS.`
+    - ![control](https://img.shields.io/badge/customization-orange?style=flat) Unsure? Start on `PaaS for speed + control; move edge cases to IaaS if required.`
+
+<details markdown="1">
 <summary><b>More details</b> (Click to expand)</summary>
 
 | Dimension | ![SaaS](https://img.shields.io/badge/SaaS-fastest-brightgreen?style=flat) Microsoft Copilots | ![PaaS](https://img.shields.io/badge/PaaS-control-orange?style=flat) Azure AI Foundry | ![IaaS](https://img.shields.io/badge/IaaS-flexibility-blue?style=flat) Self-managed on VMs/Kubernetes |
@@ -153,7 +153,7 @@ Click here to [access the diagram](./docs/ai-chat-decision-flow.drawio)
 
 <img width="858" height="1546" alt="image" src="https://github.com/user-attachments/assets/702b07f1-4a92-4e76-82ef-601aec91c9ea" />
 
-From [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy) 
+From [AI Strategy decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy)
 
 > To understand more about [Introduction to Microsoft Azure: Describe cloud concepts](https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/) click here, also find a quick summary:
 
@@ -165,7 +165,7 @@ From [Cloud computing - Service Models: SAAS, PAAS, IAAS - Which Is Better For B
 
 ### Q1. Is Copilot Studio only for chat?
 
-> It builds `agents` (beyond simple chat) that can call flows, connect to data, and act across channels (Teams/web). Please read more about it here [Copilot Studio overview](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) 
+> It builds `agents` (beyond simple chat) that can call flows, connect to data, and act across channels (Teams/web). Please read more about it here [Copilot Studio overview](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
 
 ### Q2. When do I prefer Azure AI Foundry?
 

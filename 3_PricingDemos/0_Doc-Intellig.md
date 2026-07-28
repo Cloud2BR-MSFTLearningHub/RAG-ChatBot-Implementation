@@ -1,8 +1,8 @@
-# Demonstration: Azure AI Document Intelligence Pricing 
+# Demonstration: Azure AI Document Intelligence Pricing
 
 Costa Rica
 
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com) 
+[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
@@ -10,10 +10,10 @@ Last updated: 2026-04-06
 
 ----------
 
-> [!IMPORTANT]
-> The information provided and any document (such as scripts, sample codes, etc.) is provided `AS-IS` and `WITH ALL FAULTS`. Pricing estimates are for `demonstration purposes only and do not reflect final pricing`. `Microsoft assumes no liability` for your use of this information and makes no guarantees or warranties, expressed or implied, regarding its accuracy or completeness, including any pricing details. `Please note that these demos are intended as a guide and are based on my personal experiences. For official guidance, support, or more detailed information, please refer to Microsoft's official documentation or contact Microsoft directly`: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
+!!! warning "Important"
+    The information provided and any document (such as scripts, sample codes, etc.) is provided `AS-IS` and `WITH ALL FAULTS`. Pricing estimates are for `demonstration purposes only and do not reflect final pricing`. `Microsoft assumes no liability` for your use of this information and makes no guarantees or warranties, expressed or implied, regarding its accuracy or completeness, including any pricing details. `Please note that these demos are intended as a guide and are based on my personal experiences. For official guidance, support, or more detailed information, please refer to Microsoft's official documentation or contact Microsoft directly`: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
 
-<details>
+<details markdown="1">
 <summary><b>List of References </b> (Click to expand)</summary>
 
 - [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
@@ -21,10 +21,10 @@ Last updated: 2026-04-06
 
 </details>
 
-> [!NOTE]
-> Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
+!!! note
+    Please note the last updated date, as the values shown in the video might change over time due to price adjustments.
 
-> E.g.0 Example of estimation: 
+> E.g.0 Example of estimation:
 
 - Number of documents: 50
 - Pages per document: 4
@@ -34,13 +34,13 @@ Last updated: 2026-04-06
 
    <https://github.com/user-attachments/assets/96081a96-61b9-47a3-9caf-0f77e389217e>
 
-> E.g.1 of estimation: 
+> E.g.1 of estimation:
 
 - Number of documents: 500
 - Pages per document: 20
 - Total pages: 10,000
 
-> E.g.2 of estimation: 
+> E.g.2 of estimation:
 
 - Number of documents: 2000
 - Pages per document: 10
