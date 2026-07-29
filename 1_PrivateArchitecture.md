@@ -76,14 +76,8 @@ Click here to see more about [Workflow in Zero Trust Architecture](./2_ZeroTrust
     | **Selected IP addresses** | Restricts access to specified public IP addresses.                         | Scenarios where you know the IP addresses of the clients that need to connect. |
     | **Disabled**            | Disables public network access entirely.                                    | Resources that should only be accessed from within a virtual network or through private endpoints. |
 
-> [!NOTE]
-> About the exception checkmark `Allow Azure services on the trusted services list to access this search service`: <br/>
-> This setting `allows trusted Azure services to bypass the network rules` and access your resource directly.
-> These include services `like Azure Backup, Azure Site Recovery`, and others that are part of the trusted services list.
-> Even with this setting enabled, `proper authentication is still required` to access the resource, such as Managed Identity or Service Principal.
-> `Only resources within the specified IP address ranges or virtual networks will have access`.
-> Resources from other tenants or subscriptions will not have access `unless they are explicitly granted access through the whitelist or fall under the allowed exceptions`.
-> This setting is particularly useful for scenarios where you want to allow Azure Site Recovery to access your search service for disaster recovery purposes without needing to configure additional network rules.
+!!! note
+  The `Allow Azure services on the trusted services list to access this search service` setting lets trusted Azure services bypass network rules. Authentication is still required, and resources outside the configured networks need an explicit exception.
 
 ### Integrate with Virtual Network (VNet)
 
@@ -158,13 +152,13 @@ graph TD
 
    > Shared private access:
 
-    <img width="550" alt="image" src="https://github.com/user-attachments/assets/0c1e7ca2-344d-4140-bf37-8dc1d2afa669">
+  <img width="550" alt="Configure shared private access for Azure AI Search" src="https://github.com/user-attachments/assets/0c1e7ca2-344d-4140-bf37-8dc1d2afa669">
 
     > Private Endpoint:
 
-    <img width="550" alt="image" src="https://github.com/user-attachments/assets/1e59a0fc-9bc5-49fb-aa80-29fa47cd92f7">
+  <img width="550" alt="Configure an Azure AI Search private endpoint" src="https://github.com/user-attachments/assets/1e59a0fc-9bc5-49fb-aa80-29fa47cd92f7">
 
-    <img width="550" alt="image" src="https://github.com/user-attachments/assets/3db7df26-b7ca-4519-b8bf-6f4abc9d5441">
+  <img width="550" alt="Review the private endpoint connection" src="https://github.com/user-attachments/assets/3db7df26-b7ca-4519-b8bf-6f4abc9d5441">
 
   - While doing this you can also setup the Network Security Group (NSG) if it's not already set up.
 
