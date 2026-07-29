@@ -64,7 +64,7 @@
       - Supports 30+ programming languages
       - Requires a [GitHub Copilot subscription](https://github.com/features/copilot)
 
-<img width="846" height="1048" alt="ai-chat-decision-flow drawio" src="docs/ai-chat-decision-flow.png" />
+<img width="846" height="1048" alt="Microsoft AI platform decision flow" src="https://raw.githubusercontent.com/Cloud2BR-MSFTLearningHub/RAG-ChatBot-Implementation/main/docs/ai-chat-decision-flow.png" />
 
 !!! tip
     <img src="https://img.shields.io/badge/GitHub_Copilot-AI_Coding_Assistant-6e40c9?style=flat&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" height="22"/> &nbsp; **Need AI assistance for your code?** → Use **[GitHub Copilot](https://github.com/features/copilot)**!
