@@ -25,11 +25,11 @@
 
   <path d="M370 335 H470" fill="none" stroke="#0078d4" stroke-width="4"/>
   <path d="M470 335 L452 324 M470 335 L452 346" fill="none" stroke="#0078d4" stroke-width="4" stroke-linecap="round"/>
-  <rect x="378" y="260" width="158" height="50" rx="25" fill="#dff1ff" stroke="#0078d4" stroke-width="1.5"/>
-  <text class="small" x="402" y="291">Quality curation</text>
-  <text class="small" x="400" y="375">Validate accuracy</text>
-  <text class="small" x="405" y="398">Remove noise</text>
-  <text class="small" x="396" y="421">Keep representative scope</text>
+  <rect x="370" y="260" width="108" height="50" rx="25" fill="#dff1ff" stroke="#0078d4" stroke-width="1.5"/>
+  <text class="small" x="385" y="291">Curate</text>
+  <text class="small" x="390" y="375">Validate</text>
+  <text class="small" x="382" y="398">Remove noise</text>
+  <text class="small" x="382" y="421">Keep scope</text>
 
   <rect x="495" y="145" width="355" height="375" rx="8" fill="#ffffff" stroke="#0078d4" stroke-width="3"/>
   <rect x="495" y="145" width="355" height="47" rx="8" fill="#0078d4"/>
@@ -48,22 +48,25 @@
   <path d="M870 420 H955" fill="none" stroke="#2f855a" stroke-width="4" stroke-dasharray="9 7"/>
   <path d="M955 420 L937 409 M955 420 L937 431" fill="none" stroke="#2f855a" stroke-width="4" stroke-linecap="round"/>
 
-  <rect x="975" y="160" width="180" height="175" rx="8" fill="#ffffff" stroke="#805ad5" stroke-width="2"/>
-  <rect x="975" y="160" width="180" height="40" rx="8" fill="#805ad5"/>
-  <text class="tag" x="992" y="186">3. EVALUATE</text>
-  <text class="label" x="992" y="235">Benchmark Q&amp;A</text>
-  <text class="small" x="992" y="268">Known questions</text>
-  <text class="small" x="992" y="291">Known correct answers</text>
-  <text class="small" x="992" y="314">Measure retrieval and</text>
-  <text class="small" x="992" y="335">answer quality over time</text>
+  <rect x="975" y="135" width="180" height="245" rx="8" fill="#ffffff" stroke="#805ad5" stroke-width="2"/>
+  <rect x="975" y="135" width="180" height="40" rx="8" fill="#805ad5"/>
+  <text class="tag" x="992" y="161">3. EVALUATE</text>
+  <text class="label" x="992" y="210">Benchmark Q&amp;A</text>
+  <text class="small" x="992" y="243">Known questions</text>
+  <text class="small" x="992" y="266">Known correct</text>
+  <text class="small" x="992" y="289">answers</text>
+  <text class="small" x="992" y="312">Measure retrieval</text>
+  <text class="small" x="992" y="335">and answer quality</text>
+  <text class="small" x="992" y="358">over time</text>
 
-  <rect x="975" y="365" width="180" height="155" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
-  <rect x="975" y="365" width="180" height="40" rx="8" fill="#2f855a"/>
-  <text class="tag" x="992" y="391">4. EXPLORE</text>
-  <text class="label" x="992" y="440">Expert questions</text>
-  <text class="small" x="992" y="473">Additional testing is</text>
-  <text class="small" x="992" y="496">welcome, but it retrieves</text>
-  <text class="small" x="992" y="519">from the same corpus.</text>
+  <rect x="975" y="405" width="180" height="185" rx="8" fill="#ffffff" stroke="#2f855a" stroke-width="2"/>
+  <rect x="975" y="405" width="180" height="40" rx="8" fill="#2f855a"/>
+  <text class="tag" x="992" y="431">4. EXPLORE</text>
+  <text class="label" x="992" y="480">Expert questions</text>
+  <text class="small" x="992" y="513">Additional testing</text>
+  <text class="small" x="992" y="536">is welcome. It retrieves</text>
+  <text class="small" x="992" y="559">from the same corpus.</text>
 
-  <text class="small" x="70" y="590">The golden dataset is not simply an overlap of source data: it is an intentionally selected, quality-controlled subset with measurable evaluation evidence.</text>
+  <text class="small" x="70" y="600">The golden dataset is an intentionally selected, quality-controlled subset of the broader source.</text>
+  <text class="small" x="70" y="624">Known-answer benchmarks add measurable evaluation evidence.</text>
 </svg>
