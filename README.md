@@ -611,6 +611,9 @@ gpt-rag-resource-group: resource not found: 0 resource groups with prefix or suf
 </details>
 
 !!! note
-    A `golden dataset` for RAG is your trusted `curated set of documents or files that the system retrieves from when answering questions`. It’s a clean, accurate, and `representative subset of all possible data free of noise and errors`, so the model always pulls reliable context. Is a `subset of files, for example, and known Q&A pairs chosen from the larger data source.` These are the “benchmark” `questions where the correct answers are already known`, so they can be `used later to measure system accuracy and performance`. Other `expert users are free to ask additional questions during testing, but those will still pull context from the same curated files in the golden dataset (subset datasource)`. In short, it’s the trusted evaluation set for your proof of concept for example.
+    A `golden dataset` for RAG is a trusted, curated subset of the wider data source. It contains clean, accurate, representative documents or files that the system retrieves when it answers questions. It also includes benchmark question-and-answer pairs with known correct answers, which are used to measure retrieval quality, answer accuracy, and performance over time. Experts may ask additional exploratory questions during testing, but those questions still retrieve context from the same curated corpus. For a proof of concept, the golden dataset is the trusted retrieval and evaluation baseline.
 
-<img width="411" height="243" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/40682ec2-77e4-4413-88e5-d343f036f084" />
+<figure markdown="span">
+  ![Golden dataset for RAG: a broad data source is curated into a trusted retrieval corpus; benchmark questions with known answers evaluate it, and exploratory expert questions retrieve from that same corpus.](assets/golden-dataset-rag.svg){ width="920" }
+  <figcaption>Golden dataset for RAG: curated retrieval context plus known-answer evaluation benchmarks.</figcaption>
+</figure>
