@@ -33,7 +33,7 @@
 |----------------|----------------|-------------------------------|
 | **Retrieval**  | Retrieval involves searching and extracting relevant documents or data from a knowledge base or external data source based on the input query. | Use Azure AI Search to index and query documents stored in Azure Storage Blob Containers. Configure the search index to perform semantic search and return the most relevant results. |
 | **Augmentation** | Augmentation involves enhancing the input query with the retrieved information to provide additional context and details. | Use Azure AI Search skillsets to preprocess the retrieved data, extracting key phrases, entities, and contextual information. This augmented input is then used to inform the generative model. |
-| **Generation** | Generation involves using a generative model to process the augmented input and produce a coherent and contextually relevant response. | Deploy a generative model like GPT-4 on Azure OpenAI Service. Use an Azure Function App to orchestrate the data flow, calling the Azure OpenAI API to generate responses based on the augmented input. |
+| **Generation** | Generation involves using a generative model to process the augmented input and produce a coherent and contextually relevant response. | Deploy a generative model like GPT-4 on Azure AI Foundry. Use an Azure Function App to orchestrate the data flow, calling the Azure AI Foundry model API to generate responses based on the augmented input. |
 
 > Implementing RAG Pattern with Azure AI:
 
@@ -98,7 +98,7 @@ graph LR
     - Perform semantic search to retrieve the most relevant documents based on the query.
   - **Augmentation**: Extract key information from the retrieved documents using Azure AI Search skillsets (key phrase extraction, entity recognition, language detection).
   - **Generation**:
-    - Use Azure OpenAI Service to generate a coherent and contextually relevant answer by processing the augmented input.
+    - Use Azure AI Foundry to generate a coherent and contextually relevant answer by processing the augmented input.
     - Orchestrate the data flow using Azure Function App.
 
 </details>
@@ -114,7 +114,7 @@ graph LR
     - Retrieve the most relevant sections of the document based on the summary request.
   - **Augmentation**: Identify key sentences, paragraphs, and sections using Azure AI Search skillsets.
   - **Generation**:
-    - Use Azure OpenAI Service to generate a concise summary by processing the augmented input.
+    - Use Azure AI Foundry to generate a concise summary by processing the augmented input.
     - Orchestrate the data flow using Azure Function App.
 
 </details>
@@ -130,7 +130,7 @@ graph LR
     - Retrieve the most relevant documents based on the conversation.
   - **Augmentation**: Extract key information from the retrieved documents using Azure AI Search skillsets (answers to common questions, troubleshooting steps, product details).
   - **Generation**:
-    - Use Azure OpenAI Service to generate coherent and contextually relevant chatbot responses by processing the augmented input.
+    - Use Azure AI Foundry to generate coherent and contextually relevant chatbot responses by processing the augmented input.
     - Orchestrate the data flow using Azure Function App.
 
 </details>
