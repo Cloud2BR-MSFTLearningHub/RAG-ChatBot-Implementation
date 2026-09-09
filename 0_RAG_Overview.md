@@ -46,20 +46,21 @@ graph LR
 2. **Configure a Retrieval System**: Use Azure AI Search to index and retrieve relevant documents based on user queries.
 3. **Integrate with a Generative Model**: Use a generative model like GPT-4 to process the retrieved documents and generate responses.
 
-> Traditional methods and the `Retrieval-Augmented Generation (RAG)` pattern:
+> Traditional methods, `Retrieval-Augmented Generation (RAG)`, and `Agentic RAG`:
 
-| **Aspect**                | **Traditional Methods**| **RAG Pattern** |
-|---------------------------|-------------------------------------|-----------------------------------------------------|
-| **Model Type**            | Static, pre-trained models that rely on historical data. These models do not update dynamically and can become outdated. | Dynamic integration of retrieval and generative models, allowing for real-time data updates, keeping responses current and relevant. |
-| **Data Freshness**        | Relies on pre-trained data, which may not reflect the latest information.                | Retrieves the most recent data from external sources, ensuring up-to-date information.            |
-| **Context Understanding** | Often lacks the ability to fully understand the context of a query, leading to less accurate results. | Enhances context understanding by incorporating real-time information retrieval, providing richer context for responses. |
-| **Retrieval Techniques**  | Uses keyword matching techniques like BM25 and TF-IDF, which may not capture the semantic meaning of queries. | Employs advanced semantic search techniques that better understand the intent behind queries, leading to more relevant results. |
-| **Accuracy**              | May struggle with understanding context and semantic meaning, resulting in less accurate responses. | Improves accuracy by grounding responses in verified external knowledge, reducing the likelihood of errors. |
-| **Risk of Hallucinations**| Higher risk of generating incorrect information as responses are based solely on training data. | Reduces this risk by grounding responses in real-time, verified information from external sources. |
-| **Flexibility**           | Limited to specific data types and formats, which can restrict their applicability.      | Capable of handling various data types, including text, images, and videos, making it more versatile. |
-| **Adaptability**          | Requires extensive retraining to incorporate new information, which can be time-consuming and costly. | More adaptable as it integrates real-time data without the need for frequent retraining.           |
-| **Cost Efficiency**       | Can be resource-intensive due to the need for frequent retraining and large labeled datasets. | More cost-effective as it minimizes the need for extensive retraining and leverages existing data sources. |
-| **Applications**          | Suitable for basic search and static content generation.                                | Ideal for complex applications such as healthcare, customer support, and content creation, where up-to-date and contextually relevant information is crucial. |
+| **Aspect** | **Traditional Methods** | **RAG Pattern** | **Agentic RAG** |
+|---|---|---|---|
+| **Model Behavior** | Generates from fixed, pre-trained knowledge and a single prompt. | Grounds generation with retrieved context at response time. | Plans multi-step work, chooses tools, and iterates until it can complete or escalate a task. |
+| **Data Freshness** | Knowledge can become outdated until the model is retrained. | Retrieves current information from connected, approved sources. | Decides when to retrieve, refresh, or query additional systems as the task evolves. |
+| **Context Understanding** | Uses only the prompt and its learned knowledge. | Adds relevant documents to the prompt for richer, evidence-based responses. | Maintains task state and can refine the question, gather missing context, and verify intermediate results. |
+| **Retrieval Techniques** | Commonly relies on keyword search or manually supplied content. | Uses keyword, vector, hybrid, and semantic search to find relevant content. | Uses retrieval as one tool among many, selecting sources and repeating searches when the evidence is insufficient. |
+| **Accuracy and Grounding** | May produce plausible but unsupported answers. | Improves grounding by citing retrieved, trusted content. | Can validate outputs with retrieval, tools, policies, or human approval before taking an action. |
+| **Hallucination Risk** | Higher because answers rely mainly on model training data. | Lower when retrieval sources are relevant, current, and trusted. | Further reduced through tool-result validation, bounded actions, and explicit escalation for uncertain cases. |
+| **Flexibility** | Best for narrow, well-defined prompts and static workflows. | Supports knowledge-intensive question answering, summarization, and conversational experiences. | Supports multi-step workflows such as research, triage, case resolution, and coordinated system actions. |
+| **Adaptability** | Requires prompt changes, fine-tuning, or retraining to change behavior. | Adapts to new content by updating the retrieval corpus. | Adapts its plan and tool sequence to the task while operating within defined instructions and permissions. |
+| **Cost Efficiency** | Can require expensive retraining and large labeled datasets for updates. | Avoids frequent retraining by reusing a managed knowledge corpus. | Adds orchestration and tool-call cost, but can control spend through limits, caching, and early task completion. |
+| **Governance** | Primarily governed through model selection, prompts, and content controls. | Adds source curation, access controls, citations, and retrieval evaluation. | Requires tool permissions, action guardrails, audit logs, approval gates, and evaluation of both reasoning and actions. |
+| **Applications** | Basic search, static content generation, and narrow automation. | Grounded customer support, enterprise search, document summarization, and knowledge assistants. | Research assistants, service operations, incident triage, workflow automation, and human-in-the-loop business processes. |
 
 ## Applications of RAG Pattern
 
