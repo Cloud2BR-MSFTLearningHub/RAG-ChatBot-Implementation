@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title description">
+  <title id="title">Private Azure RAG architecture in a virtual network</title>
+  <desc id="description">A virtual network contains a subnet and network security group. A virtual machine, Azure AI Search, and Azure OpenAI connect through network interfaces to the subnet, network security group, and their respective private endpoints.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#31546f"/>
+    </marker>
+    <style>
+      .network { fill: #f6f9fc; stroke: #4c7a9f; stroke-width: 2; }
+      .subnet { fill: #e5f1fb; stroke: #4c7a9f; stroke-width: 2; }
+      .service { fill: #ffffff; stroke: #2f6b8e; stroke-width: 2; }
+      .nic { fill: #eaf4ee; stroke: #4b7b5b; stroke-width: 2; }
+      .endpoint { fill: #fff4df; stroke: #a56d17; stroke-width: 2; }
+      .security { fill: #fceced; stroke: #a33f4b; stroke-width: 2; }
+      .line { fill: none; stroke: #31546f; stroke-width: 2.5; marker-end: url(#arrow); }
+      .label { fill: #17324a; font-family: Segoe UI, Arial, sans-serif; font-size: 18px; font-weight: 600; text-anchor: middle; }
+      .small-label { fill: #17324a; font-family: Segoe UI, Arial, sans-serif; font-size: 16px; font-weight: 600; text-anchor: middle; }
+      .title { fill: #17324a; font-family: Segoe UI, Arial, sans-serif; font-size: 25px; font-weight: 700; text-anchor: middle; }
+      .caption { fill: #4e6475; font-family: Segoe UI, Arial, sans-serif; font-size: 15px; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <rect class="network" x="35" y="35" width="1130" height="555" rx="4"/>
+  <text class="title" x="600" y="72">Virtual Network</text>
+  <text class="caption" x="600" y="97">Private connectivity for the RAG workload</text>
+
+  <path class="line" d="M 205 175 L 205 245"/>
+  <path class="line" d="M 600 175 L 600 245"/>
+  <path class="line" d="M 995 175 L 995 245"/>
+  <path class="line" d="M 205 305 C 205 340, 220 350, 275 365"/>
+  <path class="line" d="M 205 305 C 205 380, 270 430, 430 455"/>
+  <path class="line" d="M 600 305 C 600 340, 590 350, 535 365"/>
+  <path class="line" d="M 600 305 L 600 455"/>
+  <path class="line" d="M 600 305 C 600 380, 700 430, 770 455"/>
+  <path class="line" d="M 995 305 C 995 340, 980 350, 925 365"/>
+  <path class="line" d="M 995 305 C 995 380, 900 430, 770 455"/>
+  <path class="line" d="M 600 415 L 600 455"/>
+
+  <rect class="service" x="130" y="115" width="150" height="60" rx="4"/>
+  <text class="label" x="205" y="151">Virtual Machine</text>
+  <rect class="service" x="510" y="115" width="180" height="60" rx="4"/>
+  <text class="label" x="600" y="151">Azure AI Search</text>
+  <rect class="service" x="915" y="115" width="160" height="60" rx="4"/>
+  <text class="label" x="995" y="151">Azure OpenAI</text>
+
+  <rect class="nic" x="125" y="245" width="160" height="60" rx="4"/>
+  <text class="label" x="205" y="281">NIC: VM</text>
+  <rect class="nic" x="500" y="245" width="200" height="60" rx="4"/>
+  <text class="label" x="600" y="281">NIC: AI Search</text>
+  <rect class="nic" x="905" y="245" width="180" height="60" rx="4"/>
+  <text class="label" x="995" y="281">NIC: OpenAI</text>
+
+  <rect class="endpoint" x="155" y="365" width="240" height="65" rx="4"/>
+  <text class="small-label" x="275" y="404">Private Endpoint: VM</text>
+  <rect class="security" x="520" y="365" width="160" height="50" rx="4"/>
+  <text class="label" x="600" y="397">NSG</text>
+  <rect class="endpoint" x="775" y="365" width="270" height="65" rx="4"/>
+  <text class="small-label" x="910" y="404">Private Endpoint: OpenAI</text>
+  <rect class="endpoint" x="420" y="455" width="360" height="65" rx="4"/>
+  <text class="small-label" x="600" y="494">Private Endpoint: AI Search</text>
+
+  <rect class="subnet" x="470" y="545" width="260" height="55" rx="4"/>
+  <text class="label" x="600" y="579">Subnet</text>
+</svg>

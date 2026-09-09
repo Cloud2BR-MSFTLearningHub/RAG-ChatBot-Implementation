@@ -83,40 +83,7 @@ Click here to see more about [Workflow in Zero Trust Architecture](./2_ZeroTrust
 
 > Deploy your VMs, Azure AI Search, and Azure OpenAI within the VNet.
 
-```mermaid
-graph TD
-    subgraph VNet["Virtual Network"]
-        direction TB
-        VM["VM"]
-        SearchService["AI Search"]
-        OpenAI["OpenAI"]
-        NSG["NSG"]
-        Subnet["Subnet"]
-        NIC_VM["NIC VM"]
-        NIC_SearchService["NIC AI Search"]
-        NIC_OpenAI["NIC OpenAI"]
-        PE_VM["Private Endpoint VM"]
-        PE_SearchService["Private Endpoint AI Search"]
-        PE_OpenAI["Private Endpoint OpenAI"]
-
-        VM --> NIC_VM
-        NIC_VM --> NSG
-        NIC_VM --> Subnet
-        NIC_VM --> PE_VM
-
-        SearchService --> NIC_SearchService
-        NIC_SearchService --> NSG
-        NIC_SearchService --> Subnet
-        NIC_SearchService --> PE_SearchService
-
-        OpenAI --> NIC_OpenAI
-        NIC_OpenAI --> NSG
-        NIC_OpenAI --> Subnet
-        NIC_OpenAI --> PE_OpenAI
-
-        NSG --> Subnet
-    end
-```
+![Private Azure RAG architecture in a virtual network, showing a virtual machine, Azure AI Search, and Azure OpenAI connected through NICs, private endpoints, an NSG, and a subnet.](docs/assets/private-vnet-architecture.svg)
 
 1. **Navigate to VNet**: In the Azure portal, go to`Virtual networks` and select your VNet.
 2. **Subnets**: Ensure that your subnets are correctly configured and have the necessary address space.
