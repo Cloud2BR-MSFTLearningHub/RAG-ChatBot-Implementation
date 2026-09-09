@@ -78,14 +78,8 @@ graph LR
     H --> J[Coherent Response]
     A --> K[Applications]
     K --> L[Question Answering]
-    L --> M[Definition]
-    L --> N[Implementation]
     K --> O[Document Summarization]
-    O --> P[Definition]
-    O --> Q[Implementation]
     K --> R[Conversational AI]
-    R --> S[Definition]
-    R --> T[Implementation]
 ```
 
 <details markdown="1">
