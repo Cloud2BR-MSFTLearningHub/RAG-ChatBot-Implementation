@@ -23,7 +23,7 @@ az functionapp config appsettings set --name <FUNCTION_APP_NAME> --resource-grou
 
 az functionapp config appsettings set --name <FUNCTION_APP_NAME> --resource-group <RESOURCE_GROUP> --settings AZURE_OPENAI_CHATGPT_LLM_MONITORING="true"
 
-az functionapp config appsettings set --name <FUNCTION_APP_NAME> --resource-group <RESOURCE_GROUP> --settings AZURE_OPENAI_CHATGPT_MODEL="gpt-4o"
+az functionapp config appsettings set --name <FUNCTION_APP_NAME> --resource-group <RESOURCE_GROUP> --settings AZURE_OPENAI_CHATGPT_MODEL="gpt-6-astra"
 
 az functionapp config appsettings set --name <FUNCTION_APP_NAME> --resource-group <RESOURCE_GROUP> --settings AZURE_OPENAI_EMBEDDING_DEPLOYMENT="text-embedding-3-large"
 

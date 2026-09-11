@@ -33,7 +33,7 @@
 |----------------|----------------|-------------------------------|
 | **Retrieval**  | Retrieval involves searching and extracting relevant documents or data from a knowledge base or external data source based on the input query. | Use Azure AI Search to index and query documents stored in Azure Storage Blob Containers. Configure the search index to perform semantic search and return the most relevant results. |
 | **Augmentation** | Augmentation involves enhancing the input query with the retrieved information to provide additional context and details. | Use Azure AI Search skillsets to preprocess the retrieved data, extracting key phrases, entities, and contextual information. This augmented input is then used to inform the generative model. |
-| **Generation** | Generation involves using a generative model to process the augmented input and produce a coherent and contextually relevant response. | Deploy a generative model like GPT-4 on Azure AI Foundry. Use an Azure Function App to orchestrate the data flow, calling the Azure AI Foundry model API to generate responses based on the augmented input. |
+| **Generation** | Generation involves using a generative model to process the augmented input and produce a coherent and contextually relevant response. | Deploy a generative model like GPT-6 Astra on Azure AI Foundry. Use an Azure Function App to orchestrate the data flow, calling the Azure AI Foundry model API to generate responses based on the augmented input. |
 
 > Implementing RAG Pattern with Azure AI:
 
@@ -44,7 +44,7 @@ graph LR
 
 1. **Set Up a Knowledge Base**: Store your documents in Azure Storage Blob Containers or another accessible data source.
 2. **Configure a Retrieval System**: Use Azure AI Search to index and retrieve relevant documents based on user queries.
-3. **Integrate with a Generative Model**: Use a generative model like GPT-4 to process the retrieved documents and generate responses.
+3. **Integrate with a Generative Model**: Use a generative model like GPT-6 Astra to process the retrieved documents and generate responses.
 
 > Traditional methods, `Retrieval-Augmented Generation (RAG)`, and `Agentic RAG`:
 
@@ -74,7 +74,7 @@ graph LR
     E --> F[Contextual Info]
     E --> G[Enhanced Query]
     A --> H[Generation]
-    H --> I[LLM: e.g GPT-4]
+    H --> I[LLM: e.g. GPT-6 Astra]
     H --> J[Coherent Response]
     A --> K[Applications]
     K --> L[Question Answering]

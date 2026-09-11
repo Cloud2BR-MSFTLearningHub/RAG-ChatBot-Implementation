@@ -88,7 +88,7 @@ Here is the complete list of resources for a standard Zero Trust deployment, inc
     <BR>Generates responses and vector embeddings.
     - SKU: Standard
     - Deployments:
-        - Regional gpt-4o, 40 TPM.
+        - Regional gpt-6-astra, 40 TPM.
         - text-embedding-3-large, 40 TPM.
 - **Search Service**
     <BR>Provides vector indexes for the retrieval step.

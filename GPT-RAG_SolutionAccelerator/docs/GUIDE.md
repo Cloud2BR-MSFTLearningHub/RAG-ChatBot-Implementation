@@ -344,7 +344,7 @@ As of December 19, 2024, the solution has been tested in the following regions w
 
 #### Azure OpenAI Model Support
 
-By default, the solution deploys a **Global Deployment** of the GPT-4o model (version 2024-11-20) and a **Standard Deployment** of the text-embedding-3-large model for embedding generation. To ensure compatibility, refer to the Azure OpenAI model summary table and region availability at the following link:  
+By default, the solution deploys a **Global Deployment** of the GPT-6 Astra model and a **Standard Deployment** of the text-embedding-3-large model for embedding generation. To ensure compatibility, refer to the Azure OpenAI model summary table and region availability at the following link:
 [Azure OpenAI Model Availability](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#model-summary-table-and-region-availability).
 
 If your selected region does not support these default models, you have two options:
@@ -355,7 +355,7 @@ Before proceeding with the [Provision Infrastructure Components](#9-provision-in
 
    For the Chat Completions model:
    ```bash
-   azd env set AZURE_CHAT_GPT_MODEL_NAME gpt-4o
+   azd env set AZURE_CHAT_GPT_MODEL_NAME gpt-6-astra
    azd env set AZURE_CHAT_GPT_MODEL_VERSION 2024-11-20
    azd env set AZURE_CHAT_GPT_DEPLOYMENT_TYPE GlobalStandard
    ```
@@ -1045,7 +1045,7 @@ To learn how this scenario works and configure it, check the [NL2SQL and Fabric 
 
 ## Enabling Multimodality
 
-To enable GPT-RAG to use multimodal capabilities, such as those provided by GPT-4o, set the `MULTIMODAL` environment variable to `true` in the data ingestion and set the `multimodal_rag` agent strategy in agentic orchestration Function Apps. For more details on how multimodality works and image data is ingested, refer to [Multimodal RAG Overview](MULTIMODAL_RAG.md) and the documentation in the data ingestion repository: [Multimodal Ingestion](https://github.com/Azure/gpt-rag-ingestion?tab=readme-ov-file#multimodal-ingestion) respectively.
+To enable GPT-RAG to use multimodal capabilities, such as those provided by GPT-6 Astra, set the `MULTIMODAL` environment variable to `true` in the data ingestion and set the `multimodal_rag` agent strategy in agentic orchestration Function Apps. For more details on how multimodality works and image data is ingested, refer to [Multimodal RAG Overview](MULTIMODAL_RAG.md) and the documentation in the data ingestion repository: [Multimodal Ingestion](https://github.com/Azure/gpt-rag-ingestion?tab=readme-ov-file#multimodal-ingestion) respectively.
 
 > [!NOTE]
 > Currently, only the Agentic Orchestrator supports this feature.
@@ -1219,7 +1219,7 @@ Here is the complete list of resources for a standard Zero Trust deployment, inc
     <BR>Generates responses and vector embeddings.
     - SKU: Standard
     - Deployments:
-        - Regional gpt-4o, 40 TPM.
+        - Regional gpt-6-astra, 40 TPM.
         - text-embedding-3-large, 40 TPM.
 - **Search Service**
     <BR>Provides vector indexes for the retrieval step.
