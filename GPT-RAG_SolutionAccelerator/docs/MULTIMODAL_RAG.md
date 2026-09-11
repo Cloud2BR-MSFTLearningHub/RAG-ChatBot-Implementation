@@ -41,9 +41,9 @@ This document outlines the architecture and workflow for our **multimodal Retrie
    - Perform retrieval, searching both `contentVector` and `captionVector` fields.
    - Results include both textual context and references to relevant images.
 
-6. **Response Generation (GPT-4o)**  
+6. **Response Generation (GPT-6 Astra)**
    - Build a multimodal prompt that includes retrieved text, image descriptions, and image URLs.
-   - GPT-4 generates a final enriched response, referencing both textual and visual elements.
+   - GPT-6 Astra generates a final enriched response, referencing both textual and visual elements.
 
 7. **Document & Image Lifecycle Management**  
    - Deleting a document from the index triggers an Azure Function to remove associated images from Blob Storage.

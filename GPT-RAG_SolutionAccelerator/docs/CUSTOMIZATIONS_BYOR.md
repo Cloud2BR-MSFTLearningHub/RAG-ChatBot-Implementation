@@ -103,7 +103,7 @@ If you're using a different name for the Embedding model, you'll need to set the
 | Embeddings Deployment Name | AZURE_EMBEDDINGS_DEPLOYMENT_NAME        |
 | Embeddings Vector Size     | AZURE_EMBEDDINGS_VECTOR_SIZE            |
 
-The default GPT model is **gpt-4o** version **2024-11-20** and the default deployment name is **chat**. If you're using the pre-created service with these default settings, no further modifications are required.
+The default GPT model is **gpt-6-astra** and the default deployment name is **chat**. If you're using the pre-created service with these default settings, no further modifications are required.
 
 However, if you're using a different name for the GPT, or a different model, you'll need to set the corresponding environment variables as shown in the table below.
 
